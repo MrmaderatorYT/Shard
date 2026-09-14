@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Shard mark without a background, for use inside the app. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#26439A" android:pathData="M49.16,55.76L89.64,35.52L60.16,98.00z" />
+    <path android:fillColor="#3763D0" android:pathData="M25.40,40.36L49.16,55.76L60.16,98.00z" />
+    <path android:fillColor="#9CC0FE" android:pathData="M25.40,40.36L54.44,13.52L89.64,35.52L49.16,55.76z" />
+</vector>

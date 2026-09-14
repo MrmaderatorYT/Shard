@@ -1,0 +1,20 @@
+{
+  "name": "Shard — простір знань",
+  "short_name": "Shard",
+  "description": "Приватні Markdown-нотатки, колекції, теги та вікі-зв’язки.",
+  "lang": "uk",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f7f7f5",
+  "theme_color": "#f7f7f5",
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

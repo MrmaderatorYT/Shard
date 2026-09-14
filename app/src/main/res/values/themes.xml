@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Themes.
+
+  One DayNight base theme carries the neutral palette; the accent is layered on
+  top at runtime with getTheme().applyStyle, which keeps colour choice out of the
+  activity manifest and lets the whole app recolour without duplicating themes.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Shard" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Surfaces -->
+        <item name="android:colorBackground">@color/paper</item>
+        <item name="colorSurface">@color/paper</item>
+        <item name="colorSurfaceVariant">@color/paper_container_high</item>
+        <item name="colorSurfaceElevated">@color/paper_raised</item>
+        <item name="colorSurfaceContainer">@color/paper_container</item>
+        <item name="colorSurfaceSunken">@color/paper_sunken</item>
+        <item name="colorSurfaceContainerHigh">@color/paper_container_high</item>
+
+        <!-- Content -->
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorOnSurfaceVariant">@color/ink_muted</item>
+        <item name="colorOnBackground">@color/ink</item>
+        <item name="colorOutline">@color/rule</item>
+        <item name="colorOutlineVariant">@color/rule_soft</item>
+
+        <!-- Semantic -->
+        <item name="colorError">@color/danger</item>
+        <item name="colorOnError">@color/paper</item>
+
+        <!-- System bars follow the surface so the app reads as one sheet. -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="materialAlertDialogTheme">@style/Theme.Shard.Dialog</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.Shard.BottomSheet</item>
+        <item name="android:textColorHighlight">@color/accent_blue_container</item>
+    </style>
+
+    <!-- AMOLED: true black surfaces, applied on top of the dark theme. -->
+    <style name="Theme.Shard.Black" parent="Theme.Shard">
+        <item name="android:colorBackground">@color/black_surface</item>
+        <item name="colorSurface">@color/black_surface</item>
+        <item name="colorSurfaceVariant">@color/black_container_high</item>
+        <item name="colorSurfaceElevated">@color/black_raised</item>
+        <item name="colorSurfaceContainer">@color/black_container</item>
+        <item name="colorSurfaceSunken">@color/black_sunken</item>
+        <item name="colorSurfaceContainerHigh">@color/black_container_high</item>
+        <item name="colorOnSurface">@color/night_ink</item>
+        <item name="colorOnSurfaceVariant">@color/night_ink_muted</item>
+        <item name="colorOutline">@color/black_rule</item>
+        <item name="colorOutlineVariant">@color/black_rule_soft</item>
+        <item name="colorError">@color/danger_dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+    </style>
+
+    <style name="Theme.Shard.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/Shape.Shard.Dialog</item>
+    </style>
+
+    <style name="Shape.Shard.Dialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+    <style name="Theme.Shard.BottomSheet" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="android:navigationBarColor">?attr/colorSurfaceContainer</item>
+    </style>
+
+    <!-- Accent overlays. Applied at runtime; each only touches primary roles. -->
+    <style name="Accent.Blue" parent="">
+        <item name="colorPrimary">@color/accent_blue</item>
+        <item name="colorOnPrimary">@color/paper</item>
+        <item name="colorPrimaryContainer">@color/accent_blue_container</item>
+        <item name="colorOnPrimaryContainer">@color/accent_blue_on_container</item>
+        <item name="colorSecondary">@color/accent_blue</item>
+    </style>
+
+    <style name="Accent.Violet" parent="">
+        <item name="colorPrimary">@color/accent_violet</item>
+        <item name="colorOnPrimary">@color/paper</item>
+        <item name="colorPrimaryContainer">@color/accent_violet_container</item>
+        <item name="colorOnPrimaryContainer">@color/accent_violet_on_container</item>
+        <item name="colorSecondary">@color/accent_violet</item>
+    </style>
+
+    <style name="Accent.Green" parent="">
+        <item name="colorPrimary">@color/accent_green</item>
+        <item name="colorOnPrimary">@color/paper</item>
+        <item name="colorPrimaryContainer">@color/accent_green_container</item>
+        <item name="colorOnPrimaryContainer">@color/accent_green_on_container</item>
+        <item name="colorSecondary">@color/accent_green</item>
+    </style>
+
+    <style name="Accent.Amber" parent="">
+        <item name="colorPrimary">@color/accent_amber</item>
+        <item name="colorOnPrimary">@color/paper</item>
+        <item name="colorPrimaryContainer">@color/accent_amber_container</item>
+        <item name="colorOnPrimaryContainer">@color/accent_amber_on_container</item>
+        <item name="colorSecondary">@color/accent_amber</item>
+    </style>
+
+    <style name="Accent.Pink" parent="">
+        <item name="colorPrimary">@color/accent_pink</item>
+        <item name="colorOnPrimary">@color/paper</item>
+        <item name="colorPrimaryContainer">@color/accent_pink_container</item>
+        <item name="colorOnPrimaryContainer">@color/accent_pink_on_container</item>
+        <item name="colorSecondary">@color/accent_pink</item>
+    </style>
+
+    <style name="Accent.Teal" parent="">
+        <item name="colorPrimary">@color/accent_teal</item>
+        <item name="colorOnPrimary">@color/paper</item>
+        <item name="colorPrimaryContainer">@color/accent_teal_container</item>
+        <item name="colorOnPrimaryContainer">@color/accent_teal_on_container</item>
+        <item name="colorSecondary">@color/accent_teal</item>
+    </style>
+
+    <style name="Accent.Graphite" parent="">
+        <item name="colorPrimary">@color/accent_graphite</item>
+        <item name="colorOnPrimary">@color/paper</item>
+        <item name="colorPrimaryContainer">@color/accent_graphite_container</item>
+        <item name="colorOnPrimaryContainer">@color/accent_graphite_on_container</item>
+        <item name="colorSecondary">@color/accent_graphite</item>
+    </style>
+
+    <!-- Text styles -->
+    <style name="Text.Shard.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Shard.Section" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.06</item>
+    </style>
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MergeRootFrame">
+
+    <com.ccs.shard.canvas.CanvasView
+        android:id="@+id/canvasView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorSurface"
+        app:title="@string/nav_canvas"
+        app:titleTextColor="?attr/colorOnSurface"
+        app:subtitleTextColor="?attr/colorOnSurfaceVariant"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="?attr/colorOnSurface"
+        app:elevation="0dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:orientation="vertical"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp">
+
+        <ImageButton
+            android:id="@+id/btnAddText"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_floating_card"
+            android:src="@drawable/ic_block_text"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/canvas_add_text" />
+
+        <ImageButton
+            android:id="@+id/btnAddLink"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_floating_card"
+            android:src="@drawable/ic_wiki_link"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/canvas_add_note" />
+
+        <ImageButton
+            android:id="@+id/btnAddCanvasImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_floating_card"
+            android:src="@drawable/ic_block_image"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/canvas_add_image" />
+
+        <ImageButton
+            android:id="@+id/btnCanvasDraw"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_floating_card"
+            android:src="@drawable/ic_draw"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/canvas_draw" />
+
+        <ImageButton
+            android:id="@+id/btnCanvasSelect"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_floating_card"
+            android:src="@drawable/ic_select_all"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/canvas_select_cards" />
+
+        <ImageButton
+            android:id="@+id/btnZoomIn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_floating_card"
+            android:src="@drawable/ic_zoom_in"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/canvas_zoom_in" />
+
+        <ImageButton
+            android:id="@+id/btnZoomOut"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_floating_card"
+            android:src="@drawable/ic_zoom_out"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/canvas_zoom_out" />
+
+        <ImageButton
+            android:id="@+id/btnReset"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_floating_card"
+            android:src="@drawable/ic_select_all"
+            android:scaleType="centerInside"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/canvas_fit" />
+
+    </LinearLayout>
+
+</FrameLayout>

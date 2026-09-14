@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Shard palette.
+
+  Warm neutrals rather than pure greys: the surface is paper-white and the text
+  is a soft near-black, which is what makes long reading and writing sessions
+  comfortable. Accents are saturated but never neon, so a note's colour stripe
+  reads as information rather than decoration.
+
+  Light values live here; the dark and black variants are in values-night and in
+  the Black theme overlay.
+-->
+<resources>
+
+    <!-- Neutrals, light -->
+    <color name="paper">#FFFFFFFF</color>
+    <color name="paper_sunken">#FFF7F7F5</color>
+    <color name="paper_raised">#FFFFFFFF</color>
+    <color name="paper_container">#FFFAFAF8</color>
+    <color name="paper_container_high">#FFF1F0ED</color>
+    <color name="ink">#FF37352F</color>
+    <color name="ink_muted">#FF787066</color>
+    <color name="ink_faint">#FFA8A29A</color>
+    <color name="rule">#FFDFDCD6</color>
+    <color name="rule_soft">#FFEDEBE6</color>
+
+    <!-- Neutrals, dark -->
+    <color name="night">#FF191918</color>
+    <color name="night_sunken">#FF121211</color>
+    <color name="night_raised">#FF232322</color>
+    <color name="night_container">#FF1F1F1E</color>
+    <color name="night_container_high">#FF2B2B29</color>
+    <color name="night_ink">#FFE9E7E2</color>
+    <color name="night_ink_muted">#FF9C9791</color>
+    <color name="night_ink_faint">#FF6B6762</color>
+    <color name="night_rule">#FF3A3937</color>
+    <color name="night_rule_soft">#FF2A2A28</color>
+
+    <!-- Neutrals, black (AMOLED) -->
+    <color name="black_surface">#FF000000</color>
+    <color name="black_sunken">#FF000000</color>
+    <color name="black_raised">#FF141414</color>
+    <color name="black_container">#FF0C0C0C</color>
+    <color name="black_container_high">#FF1A1A1A</color>
+    <color name="black_rule">#FF2B2B2B</color>
+    <color name="black_rule_soft">#FF1C1C1C</color>
+
+    <!-- Accents -->
+    <color name="accent_blue">#FF2F6FEB</color>
+    <color name="accent_blue_container">#FFDCE7FD</color>
+    <color name="accent_blue_on_container">#FF10306E</color>
+    <color name="accent_violet">#FF6E56CF</color>
+    <color name="accent_violet_container">#FFE7E0FB</color>
+    <color name="accent_violet_on_container">#FF2E2166</color>
+    <color name="accent_green">#FF0F9D58</color>
+    <color name="accent_green_container">#FFD6F2E2</color>
+    <color name="accent_green_on_container">#FF064425</color>
+    <color name="accent_amber">#FFD9480F</color>
+    <color name="accent_amber_container">#FFFBE3D6</color>
+    <color name="accent_amber_on_container">#FF5E1F06</color>
+    <color name="accent_pink">#FFC2255C</color>
+    <color name="accent_pink_container">#FFFBDDE8</color>
+    <color name="accent_pink_on_container">#FF580B27</color>
+    <color name="accent_teal">#FF0B7285</color>
+    <color name="accent_teal_container">#FFD3EDF2</color>
+    <color name="accent_teal_on_container">#FF03323A</color>
+    <color name="accent_graphite">#FF495057</color>
+    <color name="accent_graphite_container">#FFE4E6E8</color>
+    <color name="accent_graphite_on_container">#FF202427</color>
+
+    <!-- Semantic -->
+    <color name="danger">#FFD64545</color>
+    <color name="danger_dark">#FFF07171</color>
+    <color name="warning">#FFE8A33D</color>
+    <color name="success">#FF2F9E68</color>
+
+    <!-- Note colour stripes, used for cards and graph nodes -->
+    <color name="hue_1">#FF6E8FE8</color>
+    <color name="hue_2">#FF8B7BD8</color>
+    <color name="hue_3">#FF57A98A</color>
+    <color name="hue_4">#FFD98E4B</color>
+    <color name="hue_5">#FFCF6B8E</color>
+    <color name="hue_6">#FF4FA0B0</color>
+    <color name="hue_7">#FFB08968</color>
+    <color name="hue_8">#FF8A8F98</color>
+
+    <!-- Graph -->
+    <color name="graph_edge_light">#33555049</color>
+    <color name="graph_edge_dark">#3AA8A29A</color>
+</resources>

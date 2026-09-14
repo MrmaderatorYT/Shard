@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f7f5">
+  <meta name="description" content="Shard — приватний простір для нотаток і знань у Markdown.">
+  <title>Shard — нотатки, що пов’язуються</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+  <link rel="apple-touch-icon" href="/icon-512.png">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="stylesheet" href="/styles.css?v=20260827-1">
+  <script src="/app.js?v=20260827-2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#editor-title">До редактора</a>
+
+  <div class="app-shell" id="app-shell">
+    <header class="mobile-header">
+      <button class="icon-button" id="open-sidebar" type="button" aria-label="Відкрити навігацію" aria-controls="sidebar" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <a class="mobile-brand" href="#" data-nav-view="all" aria-label="Shard — усі нотатки">
+        <span class="brand-mark brand-mark--small" aria-hidden="true">S</span>
+        <span>Shard</span>
+      </a>
+      <button class="icon-button" id="mobile-search" type="button" aria-label="Пошук нотаток">
+        <span aria-hidden="true">⌕</span>
+      </button>
+    </header>
+
+    <aside class="sidebar" id="sidebar" aria-label="Основна навігація">
+      <div class="brand-row">
+        <a class="brand" href="#" data-nav-view="all" aria-label="Shard — усі нотатки">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span class="brand-copy">
+            <strong>Shard</strong>
+            <small>простір знань</small>
+          </span>
+        </a>
+        <button class="icon-button compact sidebar-close" id="close-sidebar" type="button" aria-label="Закрити навігацію">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+
+      <button class="primary-button new-note-trigger" type="button" data-create-note>
+        <span class="button-icon" aria-hidden="true">＋</span>
+        Нова нотатка
+        <kbd>⌘ N</kbd>
+      </button>
+
+      <nav class="main-nav" aria-label="Нотатки">
+        <button class="nav-item is-active" type="button" data-view="all" aria-current="page">
+          <span class="nav-icon" aria-hidden="true">◫</span>
+          <span>Усі нотатки</span>
+          <span class="nav-count" id="count-all">0</span>
+        </button>
+        <button class="nav-item" type="button" data-view="favorites">
+          <span class="nav-icon" aria-hidden="true">◇</span>
+          <span>Улюблені</span>
+          <span class="nav-count" id="count-favorites">0</span>
+        </button>
+        <button class="nav-item" type="button" data-view="pinned">
+          <span class="nav-icon" aria-hidden="true">⌾</span>
+          <span>Закріплені</span>
+          <span class="nav-count" id="count-pinned">0</span>
+        </button>
+        <button class="nav-item" type="button" data-view="recent">
+          <span class="nav-icon" aria-hidden="true">◷</span>
+          <span>Недавні</span>
+        </button>
+        <button class="nav-item" type="button" data-view="trash">
+          <span class="nav-icon" aria-hidden="true">♲</span>
+          <span>Кошик</span>
+          <span class="nav-count" id="count-trash">0</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-section collections-section">
+        <div class="section-heading">
+          <span>Колекції</span>
+          <button class="tiny-button" id="focus-tags" type="button" aria-label="Керувати колекціями">＋</button>
+        </div>
+        <div class="collections" id="collections-list">
+          <p class="sidebar-empty">Колекції з’являться після створення нотаток.</p>
+        </div>
+      </div>
+
+      <div class="sidebar-section tag-section">
+        <div class="section-heading">
+          <span>Теги</span>
+        </div>
+        <div class="tag-cloud" id="tag-cloud" aria-label="Фільтр за тегами">
+          <span class="sidebar-empty">Тегів поки немає</span>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="vault-summary" id="vault-summary" aria-live="polite">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span><strong id="stats-notes">0</strong> нотаток · <strong id="stats-words">0</strong> слів</span>
+        </div>
+        <button class="nav-item theme-toggle" id="theme-toggle" type="button">
+          <span class="nav-icon" id="theme-icon" aria-hidden="true">◐</span>
+          <span id="theme-label">Системна тема</span>
+          <span class="nav-hint">змінити</span>
+        </button>
+      </div>
+    </aside>
+
+    <section class="note-panel" id="note-panel" aria-label="Список нотаток">
+      <div class="list-toolbar">
+        <label class="search-field" for="search-input">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" autocomplete="off" placeholder="Пошук нотаток…" aria-keyshortcuts="Meta+K Control+K">
+          <kbd>⌘ K</kbd>
+        </label>
+        <button class="icon-button new-note-compact" type="button" data-create-note aria-label="Створити нотатку">
+          <span aria-hidden="true">＋</span>
+        </button>
+      </div>
+
+      <div class="list-heading">
+        <div>
+          <p class="eyebrow" id="list-context">Моє сховище</p>
+          <h1 id="list-title">Усі нотатки</h1>
+        </div>
+        <label class="sort-control" aria-label="Сортування нотаток">
+          <span aria-hidden="true">↕</span>
+          <select id="sort-select">
+            <option value="updated-desc">Останні змінені</option>
+            <option value="created-desc">Спочатку нові</option>
+            <option value="title-asc">За назвою</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="active-filter" id="active-filter" hidden>
+        <span id="active-filter-label"></span>
+        <button type="button" id="clear-filter">×</button>
+      </div>
+
+      <div class="notes-scroll" id="notes-scroll">
+        <div class="loading-list" id="notes-loading" aria-label="Завантаження нотаток" aria-live="polite">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="note-list" id="note-list" role="listbox" aria-label="Нотатки" tabindex="0"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <div class="empty-illustration" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <h2 id="empty-title">Нотаток ще немає</h2>
+          <p id="empty-copy">Створіть першу нотатку — вона зберігатиметься у звичайному Markdown.</p>
+          <button class="secondary-button" type="button">Створити нотатку</button>
+        </div>
+      </div>
+
+      <footer class="list-footer">
+        <span id="visible-count">0 нотаток</span>
+        <span id="connection-status" class="connection-status"><i aria-hidden="true"></i> синхронізовано</span>
+      </footer>
+    </section>
+
+    <main class="editor-panel" id="editor-panel">
+      <section class="editor-welcome" id="editor-welcome">
+        <div class="welcome-symbol" aria-hidden="true">
+          <span>S</span>
+        </div>
+        <p class="eyebrow">Ласкаво просимо до Shard</p>
+        <h2>Думки знаходять зв’язки тут.</h2>
+        <p>Оберіть нотатку зі списку або створіть нову. Пишіть у Markdown, додавайте теги й будуйте власну базу знань.</p>
+        <div class="welcome-actions">
+          <button class="primary-button" type="button" data-create-note><span aria-hidden="true">＋</span> Нова нотатка</button>
+          <button class="secondary-button" type="button" id="welcome-search"><span aria-hidden="true">⌕</span> Знайти нотатку</button>
+        </div>
+        <div class="shortcut-grid" aria-label="Гарячі клавіші">
+          <span><kbd>⌘ N</kbd> нова нотатка</span>
+          <span><kbd>⌘ K</kbd> пошук</span>
+          <span><kbd>⌘ S</kbd> зберегти</span>
+        </div>
+      </section>
+
+      <article class="editor" id="editor" hidden aria-label="Редактор нотатки">
+        <header class="editor-header">
+          <div class="editor-nav-actions">
+            <button class="icon-button editor-back" id="editor-back" type="button" aria-label="Повернутися до списку">
+              <span aria-hidden="true">←</span>
+            </button>
+            <div class="breadcrumbs" id="breadcrumbs" aria-label="Розташування нотатки">
+              <span>Моє сховище</span><span aria-hidden="true">/</span><strong>Без колекції</strong>
+            </div>
+          </div>
+          <div class="editor-actions">
+            <span class="save-status" id="save-status" role="status"><i aria-hidden="true"></i> Збережено</span>
+            <button class="icon-button action-toggle" id="favorite-button" type="button" aria-label="Додати до улюблених" aria-pressed="false">
+              <span aria-hidden="true">◇</span>
+            </button>
+            <button class="icon-button action-toggle" id="pin-button" type="button" aria-label="Закріпити" aria-pressed="false">
+              <span aria-hidden="true">⌾</span>
+            </button>
+            <button class="icon-button" id="note-menu-button" type="button" aria-label="Дії з нотаткою" aria-haspopup="menu" aria-expanded="false">
+              <span aria-hidden="true">•••</span>
+            </button>
+            <div class="context-menu" id="note-menu" role="menu" hidden>
+              <button type="button" role="menuitem" id="copy-markdown"><span aria-hidden="true">▣</span> Копіювати Markdown</button>
+              <button type="button" role="menuitem" id="download-markdown"><span aria-hidden="true">⇩</span> Завантажити .md</button>
+              <div class="menu-separator" role="separator"></div>
+              <button type="button" role="menuitem" class="danger-menu-item" id="delete-note"><span aria-hidden="true">♲</span> Перемістити в кошик</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="trash-banner" id="trash-banner" hidden>
+          <div>
+            <strong>Ця нотатка в кошику</strong>
+            <span>Відновіть її, щоб знову редагувати.</span>
+          </div>
+          <div class="trash-actions">
+            <button class="secondary-button" id="restore-note" type="button">Відновити</button>
+            <button class="danger-button" id="delete-forever" type="button">Видалити назавжди</button>
+          </div>
+        </div>
+
+        <div class="editor-document">
+          <div class="note-identity-row">
+            <button class="emoji-button" id="emoji-button" type="button" aria-label="Змінити емодзі нотатки">✦</button>
+            <input class="title-input" id="editor-title" type="text" maxlength="180" placeholder="Назва нотатки" aria-label="Назва нотатки">
+          </div>
+
+          <div class="metadata-row">
+            <label class="collection-field">
+              <span aria-hidden="true">▤</span>
+              <span class="sr-only">Колекція</span>
+              <input id="collection-input" type="text" list="collection-options" maxlength="80" placeholder="Додати до колекції">
+              <datalist id="collection-options"></datalist>
+            </label>
+            <label class="tags-field">
+              <span aria-hidden="true">#</span>
+              <span class="sr-only">Теги через кому</span>
+              <input id="tags-input" type="text" placeholder="теги через кому" autocomplete="off">
+            </label>
+          </div>
+
+          <div class="editor-mode-row">
+            <div class="segmented-control" role="tablist" aria-label="Режим редактора">
+              <button type="button" role="tab" id="edit-tab" aria-controls="markdown-editor" aria-selected="true" data-mode="edit">Редагування</button>
+              <button type="button" role="tab" id="preview-tab" aria-controls="markdown-preview" aria-selected="false" data-mode="preview">Перегляд</button>
+            </div>
+            <span class="document-meta" id="document-meta">0 слів · 0 хв читання</span>
+          </div>
+
+          <div class="format-toolbar" id="format-toolbar" role="toolbar" aria-label="Форматування Markdown">
+            <button type="button" data-format="bold" aria-label="Жирний текст" title="Жирний текст"><strong>B</strong></button>
+            <button type="button" data-format="italic" aria-label="Курсив" title="Курсив"><em>I</em></button>
+            <button type="button" data-format="heading" aria-label="Заголовок" title="Заголовок">H₂</button>
+            <span role="separator"></span>
+            <button type="button" data-format="link" aria-label="Посилання" title="Посилання">↗</button>
+            <button type="button" data-format="wiki" aria-label="Вікі-посилання" title="Вікі-посилання">[[]]</button>
+            <button type="button" data-format="code" aria-label="Код" title="Код">&lt;/&gt;</button>
+            <span role="separator"></span>
+            <button type="button" data-format="bullet" aria-label="Маркований список" title="Маркований список">• ≡</button>
+            <button type="button" data-format="check" aria-label="Список завдань" title="Список завдань">☑</button>
+            <button type="button" data-format="quote" aria-label="Цитата" title="Цитата">❝</button>
+          </div>
+
+          <label class="sr-only" for="markdown-editor">Текст нотатки у Markdown</label>
+          <textarea id="markdown-editor" class="markdown-editor" spellcheck="true" placeholder="Почніть писати…&#10;&#10;Порада: використовуйте [[подвійні дужки]], щоб пов’язувати нотатки."></textarea>
+          <section id="markdown-preview" class="markdown-preview" aria-labelledby="preview-tab" hidden></section>
+        </div>
+
+        <footer class="editor-footer">
+          <span id="updated-time">Щойно змінено</span>
+          <span class="footer-help"><kbd>/</kbd> команди · Markdown</span>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <div class="scrim" id="scrim" hidden></div>
+
+  <dialog class="modal" id="new-note-dialog" aria-labelledby="new-note-title">
+    <form method="dialog" id="new-note-form">
+      <header class="modal-header">
+        <div>
+          <p class="eyebrow">Нова ідея</p>
+          <h2 id="new-note-title">Створити нотатку</h2>
+        </div>
+        <button class="icon-button" type="button" data-close-dialog aria-label="Закрити"><span aria-hidden="true">×</span></button>
+      </header>
+      <label class="field-label" for="new-note-name">Назва</label>
+      <input class="text-field" id="new-note-name" name="title" type="text" required maxlength="180" placeholder="Наприклад, План запуску">
+      <label class="field-label" for="new-note-collection">Колекція <span>необов’язково</span></label>
+      <input class="text-field" id="new-note-collection" name="collection" type="text" list="collection-options" maxlength="80" placeholder="Робота, Навчання, Особисте…">
+      <p class="form-error" id="new-note-error" role="alert" hidden></p>
+      <footer class="modal-actions">
+        <button class="secondary-button" type="button" data-close-dialog>Скасувати</button>
+        <button class="primary-button" type="submit">Створити нотатку</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog class="modal confirm-modal" id="confirm-dialog" aria-labelledby="confirm-title">
+    <form method="dialog" id="confirm-form">
+      <div class="confirm-symbol" aria-hidden="true">!</div>
+      <h2 id="confirm-title">Перемістити нотатку в кошик?</h2>
+      <p id="confirm-copy">Її можна буде відновити пізніше.</p>
+      <footer class="modal-actions">
+        <button class="secondary-button" type="button" data-close-dialog>Скасувати</button>
+        <button class="danger-button" type="submit" id="confirm-action">Перемістити</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

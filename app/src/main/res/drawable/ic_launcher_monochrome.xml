@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Shard's mark: a faceted crystal shard.
+
+  Generated from the geometry in tools/logo.py so the adaptive layers, the
+  monochrome layer and the legacy bitmaps stay identical. Edit the generator, not
+  this file.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M32.55,43.77L54.33,23.64L80.73,40.14L58.62,87.00z" />
+</vector>

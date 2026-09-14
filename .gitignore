@@ -1,0 +1,36 @@
+# Android Studio and local configuration
+.idea/
+*.iml
+local.properties
+
+# Gradle and Android build output
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+app/release/
+*.apk
+*.aab
+*.apks
+*.dex
+
+# Signing credentials and local environment files
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local data and generated tooling output
+.bug-hunter/
+web/data/
+web/shard-web
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db

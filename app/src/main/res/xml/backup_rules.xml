@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Android Auto Backup rules for API 30 and below (API 31+ uses
+   data_extraction_rules.xml instead).
+
+   What we back up: the vault itself (Markdown notes, attachments, canvases)
+   plus the user's settings. Everything else is either regenerable from the
+   vault or too large/private to ship to the cloud, and Auto Backup has a
+   per-app quota that a big vault can blow on its own.
+-->
+<full-backup-content>
+    <!-- Rotating ZIP snapshots of the vault: a full second copy of data we
+         already back up, and the single biggest thing in filesDir. -->
+    <exclude domain="file" path="automatic-backups" />
+
+    <!-- Local crash dumps. May contain note paths and stack traces; never
+         leaves the device unless the user explicitly shares a report. -->
+    <exclude domain="file" path="crash-reports" />
+
+    <!-- JGit working clone + sync state: a third copy of the vault, and the
+         clone is re-created on the next sync anyway. -->
+    <exclude domain="file" path="git-sync" />
+
+    <!-- FTS search index: rebuilt from the vault on demand. -->
+    <exclude domain="database" path="note-search.db" />
+    <exclude domain="database" path="note-search.db-journal" />
+    <exclude domain="database" path="note-search.db-wal" />
+    <exclude domain="database" path="note-search.db-shm" />
+
+    <!-- Version history and trash can dwarf the notes themselves. The live
+         notes and attachments under vault/ are still backed up. -->
+    <exclude domain="external" path="vault/.shard/versions" />
+    <exclude domain="external" path="vault/.shard/trash" />
+
+    <!-- Index cache under vault/.shard is rebuilt from the notes. -->
+    <exclude domain="external" path="vault/.shard/index.tsv" />
+
+    <!-- Pending cloud uploads are scratch for this device; the cloud index of
+         remote file ids is kept, so a restored vault updates the files already
+         in the cloud instead of uploading a second copy of everything. -->
+    <exclude domain="external" path="vault/.shard/cloud-queue.tsv" />
+</full-backup-content>

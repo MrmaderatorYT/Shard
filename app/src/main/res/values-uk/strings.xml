@@ -1,0 +1,916 @@
+<resources>
+    <string name="app_name">Shard</string>
+    <string name="widget_description">Швидке створення нотаток</string>
+    <string name="appwidget_provider">Швидка нотатка</string>
+    <string name="nav_daily_note">Сьогодні</string>
+    <string name="nav_calendar">Календар</string>
+    <string name="calendar_title">Календар</string>
+    <string name="calendar_today">Сьогодні</string>
+    <string name="calendar_previous_month">Попередній місяць</string>
+    <string name="calendar_next_month">Наступний місяць</string>
+    <string name="calendar_open_daily_note">Відкрити щоденну нотатку</string>
+    <string name="calendar_legend">● створені нотатки  ·  ✓ завдання  ·  ! незакриті завдання\nІнтенсивність фону показує нотатки, змінені цього дня.</string>
+    <string name="calendar_no_data">День не вибрано</string>
+    <string name="calendar_no_activity">Цього дня немає нотаток або завдань.</string>
+    <string name="calendar_tasks_for_day">Завдання на день</string>
+    <string name="calendar_no_tasks_for_day">На цей день задач немає.</string>
+    <plurals name="calendar_notes_count"><item quantity="one">Створено нотаток: %d</item><item quantity="few">Створено нотаток: %d</item><item quantity="many">Створено нотаток: %d</item><item quantity="other">Створено нотаток: %d</item></plurals>
+    <plurals name="calendar_tasks_count"><item quantity="one">Завдання: %d</item><item quantity="few">Завдання: %d</item><item quantity="many">Завдань: %d</item><item quantity="other">Завдання: %d</item></plurals>
+    <plurals name="calendar_open_tasks_count"><item quantity="one">Незакрите завдання: %d</item><item quantity="few">Незакриті завдання: %d</item><item quantity="many">Незакритих завдань: %d</item><item quantity="other">Незакриті завдання: %d</item></plurals>
+    <plurals name="calendar_activity_count"><item quantity="one">Змінено нотаток: %d</item><item quantity="few">Змінено нотатки: %d</item><item quantity="many">Змінено нотаток: %d</item><item quantity="other">Змінено нотатки: %d</item></plurals>
+    <string name="command_palette">Палітра команд</string>
+    <string name="command_search_hint">Введіть назву дії…</string>
+    <string name="command_no_results">Дій не знайдено</string>
+    <string name="command_new_note">Створити нотатку</string>
+    <string name="command_focus_search">Шукати нотатки</string>
+    <string name="command_open_settings">Відкрити налаштування</string>
+    <string name="autocomplete_create_note">Створити «%1$s»</string>
+    <string name="autocomplete_create_hint">Створити відсутню пов’язану нотатку</string>
+    <string name="autocomplete_new_tag">Новий тег</string>
+    <string name="autocomplete_note_created">Створено «%1$s»</string>
+    <string name="nav_tasks">Завдання</string>
+    <string name="tasks_title">Завдання</string>
+    <string name="tasks_overdue">Прострочені</string>
+    <string name="tasks_today">Сьогодні</string>
+    <string name="tasks_upcoming">Майбутні</string>
+    <string name="tasks_no_date">Без дати</string>
+    <string name="tasks_completed">Виконані</string>
+    <string name="tasks_archived">Архівовані</string>
+    <string name="tasks_empty">Завдань ще немає. Введіть /todo в нотатці.</string>
+    <string name="selected_tasks_count">Вибрано: %1$d</string>
+    <string name="task_untitled">Завдання без назви</string>
+    <string name="task_set_due">Встановити термін</string>
+    <string name="task_set_time">Встановити час виконання</string>
+    <string name="task_set_reminder">Встановити час нагадування</string>
+    <string name="task_priority">Пріоритет</string>
+    <string name="task_priority_none">Без пріоритету</string>
+    <string name="task_priority_low">Низький</string>
+    <string name="task_priority_medium">Середній</string>
+    <string name="task_priority_high">Високий</string>
+    <string name="task_repeat">Повторення</string>
+    <string name="task_repeat_none">Не повторювати</string>
+    <string name="task_repeat_daily">Щодня</string>
+    <string name="task_repeat_weekdays">У будні</string>
+    <string name="task_repeat_weekly">Щотижня</string>
+    <string name="task_repeat_monthly">Щомісяця</string>
+    <string name="task_move_tomorrow">Перенести на завтра</string>
+    <string name="task_move_next_week">Перенести на наступний тиждень</string>
+    <string name="task_actions">Дії із завданням</string>
+    <string name="task_open_note">Відкрити нотатку</string>
+    <string name="task_calendar">Календар задач</string>
+    <string name="task_trash">Видалені задачі</string>
+    <string name="task_trash_empty">Видалених задач немає</string>
+    <string name="task_bulk_properties">Змінити властивості</string>
+    <string name="task_bulk_moved">Перенесено задач: %1$d</string>
+    <string name="task_bulk_tagged">Позначено тегом задач: %1$d</string>
+    <string name="task_bulk_archived">Архівовано задач: %1$d</string>
+    <string name="task_bulk_unarchived">Відновлено з архіву: %1$d</string>
+    <string name="task_bulk_changed">Оновлено задач: %1$d</string>
+    <string name="task_bulk_deleted">Видалено задач: %1$d</string>
+    <string name="task_bulk_restored">Відновлено задач: %1$d</string>
+    <string name="task_bulk_delete_title">Видалити вибрані задачі?</string>
+    <string name="task_bulk_delete_body">Вибраних задач: %1$d. Їх буде переміщено до «Видалених задач», звідки можна відновити.</string>
+    <string name="task_due_notification">Завдання на сьогодні</string>
+    <string name="task_channel_name">Нагадування про завдання</string>
+    <string name="task_channel_description">Нагадування про датовані Markdown-завдання</string>
+    <string name="sync_conflict_channel_name">Конфлікти синхронізації</string>
+    <string name="sync_conflict_channel_description">Сповіщення, коли Shard зберігає конфліктні версії файлів</string>
+    <string name="sync_conflict_title">Конфлікти синхронізації збережено</string>
+    <plurals name="sync_conflict_body"><item quantity="one">%d конфліктну копію збережено поруч із нотаткою.</item><item quantity="few">%d конфліктні копії збережено поруч із нотатками.</item><item quantity="many">%d конфліктних копій збережено поруч із нотатками.</item><item quantity="other">%d конфліктної копії збережено поруч із нотатками.</item></plurals>
+    <string name="properties_title">Властивості</string>
+    <string name="properties_hint">Зберігаються як звичайний YAML і сумісні з іншими Markdown-застосунками.</string>
+    <string name="properties_add">Додати властивість</string>
+    <string name="properties_edit">Змінити властивість</string>
+    <string name="properties_key">Ключ, наприклад status</string>
+    <string name="properties_value">Значення</string>
+    <string name="properties_invalid_key">У ключі дозволені літери, цифри, дефіс і підкреслення</string>
+    <string name="nav_collections">Колекції</string>
+    <string name="collections_title">Колекції</string>
+    <string name="collections_filter_hint">Фільтр: status:active</string>
+    <string name="collections_pick_hint">Оберіть значення або введіть фільтр.</string>
+    <string name="collections_empty">Властивостей ще немає. Додайте їх із меню нотатки.</string>
+    <string name="collections_no_matches">Немає нотаток за цим фільтром.</string>
+    <string name="settings_sync_choose">Обрати хмарну або локальну папку</string>
+    <string name="settings_sync_choose_hint">Двостороння синхронізація з Google Drive, OneDrive або пам’яттю пристрою</string>
+    <string name="settings_sync_folder">Папка хмарної синхронізації</string>
+    <string name="settings_sync_now">Синхронізувати зараз</string>
+    <string name="settings_sync_never">Ще не синхронізовано</string>
+    <string name="settings_sync_running">Синхронізація сховища…</string>
+    <string name="settings_sync_done">Готово: отримано %1$d, надіслано %2$d, конфліктів %3$d</string>
+    <string name="settings_sync_failed">Немає доступу до папки синхронізації</string>
+    <string name="settings_sync_disconnect">Від’єднати папку</string>
+    <string name="settings_sync_disconnect_hint">Файли з обох боків залишаться</string>
+    <string name="git_configure">Під’єднати Git-репозиторій</string>
+    <string name="git_configure_hint">HTTPS-репозиторії GitHub, GitLab, Gitea та сумісних серверів</string>
+    <string name="git_repository">Git-репозиторій</string>
+    <string name="git_remote_hint">Адреса репозиторію (https://…)</string>
+    <string name="git_branch_hint">Гілка (наприклад main)</string>
+    <string name="git_username_hint">Ім’я користувача Git</string>
+    <string name="git_author_hint">Ім’я автора комітів</string>
+    <string name="git_email_hint">Email автора комітів</string>
+    <string name="git_token_hint">Токен доступу або пароль (для публічного pull необов’язково)</string>
+    <string name="git_token_not_saved">Токен використовується лише для цієї операції та не зберігається на пристрої.</string>
+    <string name="git_continue">Продовжити</string>
+    <string name="git_pull">Отримати зміни</string>
+    <string name="git_push">Закомітити й надіслати</string>
+    <string name="git_push_hint">Спершу отримує зміни, потім комітить і надсилає сховище</string>
+    <string name="git_edit">Налаштування Git</string>
+    <string name="git_edit_hint">Репозиторій, гілка, користувач і автор комітів</string>
+    <string name="git_disconnect">Від’єднати Git</string>
+    <string name="git_disconnect_hint">Нотатки та віддалений репозиторій залишаться</string>
+    <string name="git_pulling">Оновлення з Git…</string>
+    <string name="git_pushing">Створення коміту й надсилання…</string>
+    <string name="git_pull_done">Git оновлено: отримано %1$d, підготовлено %2$d, конфліктів %3$d</string>
+    <string name="git_push_done">Git надіслано: отримано %1$d, надіслано %2$d, конфліктів %3$d</string>
+    <string name="git_invalid_config">Вкажіть коректну HTTPS-адресу, гілку та email автора</string>
+    <string name="git_auth_failed">Помилка автентифікації Git. Перевірте ім’я користувача й токен доступу.</string>
+    <string name="git_network_failed">Не вдалося з’єднатися із сервером Git</string>
+    <string name="git_branch_failed">У цьому репозиторії немає вибраної гілки</string>
+    <string name="git_conflict_failed">Git виявив конфлікт злиття. Сховище не змінено; резервну копію створено.</string>
+    <string name="git_failed">Не вдалося синхронізувати Git</string>
+    <string name="import_preview_title">Перегляд резервної копії</string>
+    <string name="import_preview_summary">Нотаток: %1$d · полотен: %2$d · вкладень: %3$d\nРозпакований розмір: %4$s</string>
+    <string name="share_new_note">Створити нову нотатку</string>
+    <string name="shared_note_title">Поширена нотатка</string>
+    <string name="share_added">Додано до нотатки</string>
+    <string name="widget_config_title">Що має відкривати цей віджет?</string>
+    <string name="widget_specific_note">Конкретну нотатку</string>
+    <string name="widget_specific_task">Конкретне завдання</string>
+
+    <!-- General -->
+    <string name="cancel">Скасувати</string>
+    <string name="ok">ОК</string>
+    <string name="error">Помилка</string>
+    <string name="delete">Видалити</string>
+    <string name="rename">Перейменувати</string>
+    <string name="save">Зберегти</string>
+    <string name="preview">Перегляд</string>
+    <string name="split">Розділити</string>
+    <string name="search_hint">Пошук нотаток...</string>
+
+    <!-- Main Activity -->
+    <string name="no_notes_yet">Нотаток ще немає</string>
+    <string name="tap_to_create_first_note">Натисніть +, щоб створити першу нотатку</string>
+    <string name="new_folder_btn">+ Папка</string>
+    <string name="new_folder_title">Нова папка</string>
+    <string name="rename_folder_title">Перейменувати папку</string>
+    <string name="enter_folder_name">Введіть назву папки</string>
+    <string name="folder_already_exists">Папка вже існує</string>
+    <string name="invalid_folder_name">Недійсна назва папки</string>
+    <string name="create_folder">Створити</string>
+    
+    <string name="new_note_title">Нова нотатка</string>
+    <string name="enter_note_title">Назва нотатки</string>
+    
+    <string name="manage_tags">Керування тегами</string>
+    <string name="create_new_tag">Створити новий тег</string>
+    <string name="emoji">Емодзі</string>
+    <string name="color">Колір</string>
+    <string name="move_to_folder">Перемістити в папку</string>
+    
+    <string name="sort_by">Сортувати за</string>
+    <string name="sort_title_asc">Назва (А-Я)</string>
+    <string name="sort_title_desc">Назва (Я-А)</string>
+    <string name="sort_date_modified_desc">Дата зміни (спочатку нові)</string>
+    <string name="sort_date_modified_asc">Дата зміни (спочатку старі)</string>
+    <string name="sort_date_created_desc">Дата створення (спочатку нові)</string>
+    <string name="sort_date_created_asc">Дата створення (спочатку старі)</string>
+    <string name="sort_custom">Спеціальний</string>
+    
+    <string name="delete_note_confirm">Ви впевнені, що хочете видалити цю нотатку?</string>
+    
+    <!-- Main Bottom Sheet Menu -->
+    <string name="menu_title">Меню Shard</string>
+    <string name="menu_recent_notes">Недавні нотатки</string>
+    <string name="menu_bookmarks">Закладки</string>
+    <string name="menu_export_folder_zip">Експорт папки (ZIP)</string>
+    <string name="menu_backup_all">Резервна копія всіх</string>
+    <string name="menu_trash">Кошик</string>
+    <string name="menu_settings">Налаштування</string>
+    
+    <!-- Messages / Toast -->
+    <string name="folder_exported_success">Папку успішно експортовано: %1$s</string>
+    <string name="failed_to_export_folder">Не вдалося експортувати папку</string>
+    <string name="all_notes_backed_up_success">Усі нотатки успішно збережено в %1$s</string>
+    <string name="failed_to_create_backup">Не вдалося створити резервну копію</string>
+    <string name="failed_to_create_zip">Не вдалося створити ZIP-архів</string>
+    <string name="failed_to_create_pdf">Не вдалося створити PDF</string>
+    <string name="failed_to_create_html">Не вдалося створити HTML</string>
+    
+    <!-- Quick Switch / Search -->
+    <string name="quick_switch">Швидке перемикання</string>
+    <string name="no_notes_found">Нотаток не знайдено</string>
+    
+    <!-- Graph -->
+    <string name="no_links_yet">Посилань ще немає</string>
+    <string name="create_links_to_see_graph">Створюйте нотатки з [[вікі-посиланнями]], щоб побачити граф</string>
+    
+    <!-- Trash Activity -->
+    <string name="trash">Кошик</string>
+    <string name="trash_empty">Кошик порожній</string>
+    <string name="empty_trash">Очистити кошик</string>
+    <string name="empty_trash_confirm">Ви впевнені, що хочете остаточно видалити всі нотатки з кошика?</string>
+    <string name="restore_note">Відновити нотатку</string>
+    <string name="restore_note_confirm">Бажаєте відновити цю нотатку?</string>
+    
+    <!-- Vault -->
+    <string name="no_notes_yet_tap_to_create">Нотаток ще немає.\nНатисніть +, щоб створити.</string>
+    
+    <!-- Version History -->
+    <string name="version_history">Історія версій</string>
+    <string name="no_versions_yet">Версій ще немає</string>
+    <string name="versions_saved_automatically">Версії зберігаються автоматично під час редагування</string>
+    <string name="current_version">ПОТОЧНА</string>
+    <string name="restore_version_title">Відновити версію?</string>
+    <string name="restore_version_confirm">Ви впевнені, що хочете відновити цю версію? Поточні зміни будуть збережені.</string>
+    <string name="delete_version_title">Видалити версію?</string>
+    <string name="delete_version_confirm">Ви впевнені, що хочете видалити цю версію?</string>
+    <string name="changes_title">Зміни: %1$s → %2$s</string>
+    <string name="version_label">Версія: %1$s</string>
+
+    <!-- Editor -->
+    <string name="editor">Редактор</string>
+    <string name="editor_menu_title">Меню редактора</string>
+    <string name="export_markdown">Експортувати в Markdown</string>
+    <string name="export_zip">Експортувати в ZIP з зображеннями</string>
+    <string name="export_pdf">Експортувати в PDF</string>
+    <string name="export_html">Експортувати в HTML</string>
+    <string name="export_note_title">Експортувати нотатку</string>
+    <string name="statistics">Статистика</string>
+    
+    <string name="insert_link_title">Вставити вікі-посилання</string>
+    <string name="enter_note_title_to_link">Введіть назву нотатки для посилання:</string>
+    
+    <string name="word_count_reading_time_format">%1$d слів · %2$d хв читання</string>
+    
+    <!-- Settings -->
+    <string name="theme">Тема</string>
+    <string name="theme_auto">Автоматично</string>
+    <string name="theme_light">Світла</string>
+    <string name="theme_dark">Темна</string>
+    <string name="theme_amoled">AMOLED</string>
+    <string name="material_you">Material You (динамічні кольори)</string>
+    <string name="material_you_desc">Застосовує кольори шпалер на Android 12+</string>
+    <string name="accent">Акцентний колір</string>
+    <string name="display">Екран</string>
+    <string name="fullscreen">Повноекранний режим</string>
+    <string name="status_bar">Рядок стану</string>
+    <string name="navigation_bar">Панель навігації</string>
+    <string name="font_size_label_format">Шрифт: %1$d sp</string>
+    <string name="line_numbers">Номери рядків</string>
+    <string name="word_wrap">Перенос рядків</string>
+    <string name="auto_save">Автозбереження</string>
+    <string name="auto_save_interval_format">Автозбереження: %1$d с</string>
+    <string name="syntax_theme">Тема синтаксису</string>
+    <string name="about">Про програму</string>
+    <string name="about_desc">Shard — мобільний блокнот із вікі-посиланнями, переглядом графу та полотном.</string>
+    <string name="about_version_label">версія 1.0</string>
+    
+    <!-- Widget -->
+    <string name="new_note_widget">Нова нотатка</string>
+
+    <!-- Bottom Nav and Toolbars -->
+    <string name="nav_notes">Нотатки</string>
+    <string name="nav_graph">Граф</string>
+    <string name="nav_canvas">Полотно</string>
+    <string name="share_vault">Поділитися сховищем</string>
+    <string name="graph_view">Перегляд графу</string>
+    <string name="quick_switch_title">Швидке перемикання</string>
+    <string name="menu_title_option">Меню</string>
+    <string name="search">Пошук</string>
+
+    <!-- Statistics -->
+    <string name="stats_words">Слів: %1$d</string>
+    <string name="stats_chars">Символів: %1$d</string>
+    <string name="stats_chars_no_spaces">Символів (без пробілів): %1$d</string>
+    <string name="stats_sentences">Речень: %1$d</string>
+    <string name="stats_paragraphs">Абзаців: %1$d</string>
+    <string name="stats_headings">Заголовків: %1$d</string>
+    <string name="stats_images">Зображень: %1$d</string>
+    <string name="stats_links">Посилання: %1$d</string>
+    <string name="stats_wiki_links">Вікі-посилання: %1$d</string>
+    <string name="stats_code_blocks">Блоки коду: %1$d</string>
+    <string name="stats_list_items">Елементи списку: %1$d</string>
+    <string name="stats_reading_time">Час читання: ~%1$d хв</string>
+    <string name="stats_reading_time_mins">Час читання: ~%1$d хв\n</string>
+    <string name="stats_section_content">📝 Вміст</string>
+    <string name="stats_section_structure">🏗️ Структура</string>
+    <string name="stats_section_connections">🔗 Зв\’язки</string>
+    
+    <string name="summary_words">%1$d слів</string>
+    <string name="summary_chars">%1$d симв.</string>
+    <string name="summary_reading_time">~%1$d хв читання</string>
+    <string name="summary_format">%1$s · %2$s · %3$s</string>
+
+    <!-- MainActivity Option Dialog Strings -->
+    <string name="option_pin_unpin">Закріпити / Відкріпити</string>
+    <string name="option_bookmark">Закладка</string>
+    <string name="option_tags">Теги</string>
+    <string name="option_emoji">Емодзі</string>
+    <string name="option_color">Колір</string>
+    <string name="option_duplicate">Дублювати</string>
+    <string name="option_move_to_folder">Перемістити в папку</string>
+    
+    <string name="note_pinned">Закріплено</string>
+    <string name="note_unpinned">Відкріплено</string>
+    <string name="note_deleted">Нотатку видалено</string>
+    <string name="undo">Скасувати дію</string>
+    
+    <!-- Sort Options -->
+    <string name="sort_last_modified">Дата зміни</string>
+    <string name="sort_date_created">Дата створення</string>
+    <string name="sort_title_az">Назва (А-Я)</string>
+    <string name="sort_title_za">Назва (Я-А)</string>
+
+    <!-- Create Note templates and dialog -->
+    <string name="template_empty_note">Порожня нотатка</string>
+    <string name="template_daily_note">Щоденник</string>
+    <string name="template_meeting_notes">Нотатки з зустрічі</string>
+    <string name="template_project_plan">План проекту</string>
+    <string name="template_book_notes">Нотатки про книгу</string>
+    
+    <string name="tag_name_hint">Назва тегу (без #)</string>
+    <string name="new_tag">Новий тег</string>
+    <string name="delete_note_title_confirm">Видалити \"%1$s\"?</string>
+    <string name="root_notes_folder">Корінь (notes/)</string>
+    <string name="moved_to_folder">Переміщено в %1$s</string>
+    <string name="moved_to_root">корінь</string>
+    <string name="note_duplicated">Нотатку здубльовано</string>
+    <string name="copy_suffix"> (копія)</string>
+    
+    <!-- Version History options -->
+    <string name="option_view">Переглянути</string>
+    <string name="option_compare_with_previous">Порівняти з попередньою</string>
+    <string name="restore">Відновити</string>
+    <string name="restore_version_description">Це замінить поточний вміст нотатки цією версією.</string>
+    
+    <!-- Editor Activity strings -->
+    <string name="quick_note">Швидка нотатка</string>
+    <string name="edit">Редагувати</string>
+    <string name="note_restored">Нотатку відновлено</string>
+
+    <!-- Colors -->
+    <string-array name="color_names">
+        <item>Синій</item>
+        <item>Зелений</item>
+        <item>Червоний</item>
+        <item>Фіолетовий</item>
+        <item>Помаранчевий</item>
+        <item>Бірюзовий</item>
+        <item>Рожевий</item>
+        <item>Індиго</item>
+        <item>Блакитний</item>
+        <item>Темно-помаранчевий</item>
+        <item>Коричневий</item>
+        <item>Сірий</item>
+    </string-array>
+
+    <!-- Additional Dialog Strings -->
+    <string name="export">Експорт</string>
+    <string name="no_recent_notes">Немає недавніх нотаток</string>
+    <string name="clear_history">Очистити історію</string>
+    <string name="no_bookmarks">Немає закладок</string>
+    <string name="restore_note_title_confirm">Відновити \"%1$s\"?</string>
+
+    <!-- Блоковий редактор, слеш-команди, таблиці -->
+    <string name="block_options">Дії з блоком</string>
+    <string name="toggle_task">Позначити виконаним</string>
+    <string name="hint_paragraph">Пишіть або натисніть / для команд</string>
+    <string name="hint_heading">Заголовок</string>
+    <string name="hint_code">Код</string>
+    <string name="code_language">Мова</string>
+    <string name="code_language_plain">звичайний текст</string>
+    <string name="copy_as_markdown">Копіювати як Markdown</string>
+    <string name="copied_code">Код скопійовано</string>
+    <string name="copied_table">Таблицю скопійовано</string>
+    <string name="copied_note">Нотатку скопійовано</string>
+    <string name="slash_menu_title">Вставити блок</string>
+    <string name="slash_menu_empty">Команду не знайдено</string>
+    <string name="cmd_text">Текст</string>
+    <string name="cmd_text_hint">Звичайний абзац</string>
+    <string name="cmd_h1">Заголовок 1</string>
+    <string name="cmd_h1_hint">Великий заголовок розділу</string>
+    <string name="cmd_h2">Заголовок 2</string>
+    <string name="cmd_h2_hint">Середній заголовок</string>
+    <string name="cmd_h3">Заголовок 3</string>
+    <string name="cmd_h3_hint">Малий заголовок</string>
+    <string name="cmd_bullet">Маркований список</string>
+    <string name="cmd_bullet_hint">Простий перелік</string>
+    <string name="cmd_numbered">Нумерований список</string>
+    <string name="cmd_numbered_hint">Впорядкований перелік</string>
+    <string name="cmd_todo">Список завдань</string>
+    <string name="cmd_todo_hint">Відмічайте зроблене</string>
+    <string name="cmd_table">Таблиця</string>
+    <string name="cmd_table_hint">Рядки та стовпці, які можна редагувати</string>
+    <string name="cmd_code">Блок коду</string>
+    <string name="cmd_code_hint">Фрагмент із підсвіткою синтаксису</string>
+    <string name="cmd_quote">Цитата</string>
+    <string name="cmd_quote_hint">Виділити текст</string>
+    <string name="cmd_callout">Виноска</string>
+    <string name="cmd_callout_hint">Підказка або попередження</string>
+    <string name="cmd_divider">Розділювач</string>
+    <string name="cmd_divider_hint">Відділити частини</string>
+    <string name="cmd_image">Зображення</string>
+    <string name="cmd_image_hint">Вставити картинку</string>
+    <string name="cmd_link_note">Посилання на нотатку</string>
+    <string name="cmd_link_note_hint">Вставити [[вікі-посилання]]</string>
+    <string name="cmd_tag">Тег</string>
+    <string name="cmd_tag_hint">Вставити #тег</string>
+    <string name="cmd_date">Сьогоднішня дата</string>
+    <string name="cmd_date_hint">Вставити поточну дату</string>
+    <string name="table_menu_title">Таблиця</string>
+    <string name="table_add_row">Додати рядок</string>
+    <string name="table_add_column">Додати стовпець</string>
+    <string name="table_delete">Видалити таблицю</string>
+    <string name="table_clear">Очистити вміст</string>
+    <string name="table_row_handle">Дії з рядком</string>
+    <string name="table_column_handle">Дії зі стовпцем</string>
+    <string name="table_header_hint">Назва</string>
+    <string name="table_header_row">Рядок заголовків</string>
+    <string name="table_row_n">Рядок %1$d</string>
+    <string name="table_column_n">Стовпець %1$d</string>
+    <string name="table_insert_row_above">Вставити рядок вище</string>
+    <string name="table_insert_row_below">Вставити рядок нижче</string>
+    <string name="table_insert_col_left">Вставити стовпець ліворуч</string>
+    <string name="table_insert_col_right">Вставити стовпець праворуч</string>
+    <string name="table_delete_row">Видалити рядок</string>
+    <string name="table_delete_column">Видалити стовпець</string>
+    <string name="table_move_up">Перемістити вгору</string>
+    <string name="table_move_down">Перемістити вниз</string>
+    <string name="table_move_left">Перемістити ліворуч</string>
+    <string name="table_move_right">Перемістити праворуч</string>
+    <string name="align_left">Вирівняти ліворуч</string>
+    <string name="align_center">Вирівняти по центру</string>
+    <string name="align_right">Вирівняти праворуч</string>
+
+    <!-- Редактор, дії з нотаткою, експорт -->
+    <string name="redo">Повторити</string>
+    <string name="share">Поділитися</string>
+    <string name="untitled">Без назви</string>
+    <string name="indent">Збільшити відступ</string>
+    <string name="outdent">Зменшити відступ</string>
+    <string name="hide_keyboard">Сховати клавіатуру</string>
+    <string name="note_icon">Іконка нотатки</string>
+    <string name="words_count">%1$d слів</string>
+    <string name="unresolved_links">Незв’язані згадки</string>
+    <string name="tap_to_create">Торкніться, щоб створити цю нотатку</string>
+    <string name="export_failed">Не вдалося експортувати</string>
+    <string name="format_bold">Жирний</string>
+    <string name="format_italic">Курсив</string>
+    <string name="format_strike">Перекреслений</string>
+    <string name="format_code">Код у рядку</string>
+    <string name="format_link">Посилання</string>
+    <string name="read_mode">Режим читання</string>
+    <string name="edit_mode">Режим редагування</string>
+    <string name="lock_editing">Заблокувати редагування</string>
+    <string name="unlock_editing">Розблокувати редагування</string>
+    <string name="saved">Збережено</string>
+    <string name="saving">Збереження…</string>
+    <string name="save_failed">Не вдалося зберегти</string>
+    <string name="just_now">щойно</string>
+    <string name="minutes_ago">%1$d хв тому</string>
+    <string name="hours_ago">%1$d год тому</string>
+    <string name="days_ago">%1$d дн тому</string>
+    <string name="block_turn_into">Перетворити на</string>
+    <string name="block_duplicate">Дублювати</string>
+    <string name="block_move_up">Перемістити вгору</string>
+    <string name="block_move_down">Перемістити вниз</string>
+    <string name="block_delete">Видалити блок</string>
+    <string name="block_copy">Копіювати текст</string>
+    <string name="note_actions">Дії з нотаткою</string>
+    <string name="note_rename">Перейменувати</string>
+    <string name="note_move">Перемістити в теку</string>
+    <string name="note_duplicate">Дублювати нотатку</string>
+    <string name="note_pin">Закріпити</string>
+    <string name="note_unpin">Відкріпити</string>
+    <string name="note_star">Додати в улюблені</string>
+    <string name="note_unstar">Прибрати з улюблених</string>
+    <string name="note_archive">В архів</string>
+    <string name="note_unarchive">З архіву</string>
+    <string name="note_delete">У кошик</string>
+    <string name="note_history">Історія версій</string>
+    <string name="note_info">Про нотатку</string>
+    <string name="note_open_graph">Показати у графі</string>
+    <string name="note_select">Вибрати</string>
+    <string name="note_selected">Вибрано</string>
+    <string name="selection_cancel">Скасувати вибір</string>
+    <string name="selection_select_all">Вибрати всі видимі нотатки</string>
+    <string name="selection_actions">Дії з вибраними</string>
+    <string name="selected_notes_count">Вибрано: %1$d</string>
+    <string name="bulk_move">Перемістити в теку</string>
+    <string name="bulk_add_tag">Додати тег</string>
+    <string name="bulk_remove_tag">Зняти тег</string>
+    <string name="bulk_tag_hint">Назва тегу, з # або без нього</string>
+    <string name="bulk_invalid_tag">Введіть коректну назву тегу</string>
+    <string name="bulk_archive">Архівувати</string>
+    <string name="bulk_unarchive">Вийняти з архіву</string>
+    <string name="bulk_collection">Змінити колекцію</string>
+    <string name="bulk_collection_hint">Назва колекції; порожнє значення очистить її</string>
+    <string name="bulk_collection_message">Значення зберігається як переносна властивість collection.</string>
+    <string name="bulk_export">Експортувати вибране</string>
+    <string name="bulk_export_title">Експорт вибраних нотаток</string>
+    <string name="bulk_export_subject">Вибрані нотатки Shard</string>
+    <string name="bulk_export_markdown">Один документ Markdown</string>
+    <string name="bulk_export_zip">Архів ZIP</string>
+    <string name="bulk_delete">Перемістити в кошик</string>
+    <string name="bulk_delete_title">Перемістити вибрані нотатки в кошик?</string>
+    <string name="bulk_delete_body">%1$d нотаток буде переміщено в кошик на %2$d днів.</string>
+    <string name="bulk_moved">Переміщено нотаток: %1$d</string>
+    <string name="bulk_tagged">Теги оновлено в нотатках: %1$d</string>
+    <string name="bulk_archived">Архівовано нотаток: %1$d</string>
+    <string name="bulk_unarchived">Повернуто з архіву: %1$d</string>
+    <string name="bulk_collection_changed">Колекцію змінено в нотатках: %1$d</string>
+    <string name="bulk_deleted">Переміщено в кошик: %1$d</string>
+    <string name="bulk_operation_failed">Не вдалося виконати масову операцію</string>
+    <string name="export_note">Експорт</string>
+    <string name="export_as_markdown">Markdown (.md)</string>
+    <string name="export_as_html">Вебсторінка (.html)</string>
+    <string name="export_as_pdf">Документ PDF</string>
+    <string name="export_as_text">Звичайний текст (.txt)</string>
+    <string name="export_as_zip">Архів ZIP</string>
+    <string name="export_save_to">Зберегти у…</string>
+    <string name="export_share">Поділитися…</string>
+    <string name="exported_ok">Експортовано</string>
+    <string name="link_note_title">Посилання на нотатку</string>
+    <string name="link_note_search">Шукати нотатки</string>
+    <string name="link_note_create">Створити «%1$s»</string>
+    <string name="add_tag">Додати тег</string>
+    <string name="tag_name">Назва тегу</string>
+    <string name="insert_link_url">Адреса посилання</string>
+    <string name="insert_link_text">Текст посилання</string>
+    <string name="pick_icon">Виберіть іконку</string>
+    <string name="remove_icon">Прибрати іконку</string>
+    <string name="delete_note_q">Видалити цю нотатку?</string>
+    <string name="delete_note_body">«%1$s» переміститься в кошик і може бути відновлена протягом %2$d днів.</string>
+    <string name="moved_to_trash">Переміщено в кошик</string>
+
+    <plurals name="backlinks_count">
+        <item quantity="one">%1$d зворотне посилання</item>
+        <item quantity="few">%1$d зворотні посилання</item>
+        <item quantity="many">%1$d зворотних посилань</item>
+        <item quantity="other">%1$d зворотних посилань</item>
+    </plurals>
+    <plurals name="notes_count">
+        <item quantity="one">%1$d нотатка</item>
+        <item quantity="few">%1$d нотатки</item>
+        <item quantity="many">%1$d нотаток</item>
+        <item quantity="other">%1$d нотаток</item>
+    </plurals>
+
+    <!-- Головний екран, навігація, імпорт -->
+    <string name="back">Назад</string>
+    <string name="open_navigation">Відкрити навігацію</string>
+    <string name="clear_search">Очистити пошук</string>
+    <string name="sort_and_filter">Сортування й фільтри</string>
+    <string name="new_note">Нова нотатка</string>
+    <string name="import_notes">Імпортувати нотатки</string>
+    <string name="vault_root">Сховище</string>
+    <string name="note_not_found">Нотатку не знайдено</string>
+    <string name="image_import_failed">Не вдалося додати зображення</string>
+    <string name="cannot_open_link">Немає застосунку для цього посилання</string>
+    <string name="rename_conflict">Нотатка з такою назвою вже існує</string>
+    <string name="info_words">Слів: %1$d</string>
+    <string name="info_characters">Символів: %1$d</string>
+    <string name="info_blocks">Блоків: %1$d</string>
+    <string name="info_created">Створено: %1$s</string>
+    <string name="info_modified">Змінено: %1$s</string>
+    <string name="info_path">Файл: %1$s</string>
+    <string name="nav_all_notes">Усі нотатки</string>
+    <string name="nav_favourites">Улюблені</string>
+    <string name="nav_recent">Останні</string>
+    <string name="nav_tags">Теги</string>
+    <string name="nav_trash">Кошик</string>
+    <string name="nav_settings">Налаштування</string>
+    <string name="nav_folders">Теки</string>
+    <string name="nav_library">Бібліотека</string>
+    <string name="nav_vault">Сховище</string>
+    <string name="nav_import">Імпорт</string>
+    <string name="nav_export_vault">Резервна копія</string>
+    <string name="nav_new_folder">Нова тека</string>
+    <string name="section_pinned">Закріплені</string>
+    <string name="section_folders">Теки</string>
+    <string name="section_notes">Нотатки</string>
+    <string name="section_results">Результати</string>
+    <string name="empty_vault_title">Сховище порожнє</string>
+    <string name="empty_vault_body">Створіть першу нотатку або імпортуйте Markdown. Підказка: довге натискання відкриває дії, свайп закріплює або видаляє.</string>
+    <string name="empty_folder_title">Тут ще нічого немає</string>
+    <string name="empty_folder_body">У цій теці немає нотаток. Натисніть +, щоб створити її тут.</string>
+    <string name="empty_search_title">Нічого не знайдено</string>
+    <string name="empty_search_body">Немає результатів для «%1$s». Спробуйте назву, фразу з тексту або #тег.</string>
+    <string name="empty_favourites_title">Улюблених ще немає</string>
+    <string name="empty_favourites_body">Затисніть нотатку й додайте до улюблених, щоб знайти її тут.</string>
+    <string name="empty_recent_title">Немає останніх нотаток</string>
+    <string name="empty_recent_body">Тут з’являться нотатки, які ви відкривали.</string>
+    <string name="filter_tag">Тег: #%1$s</string>
+    <string name="filter_clear">Зняти фільтр</string>
+    <string name="sort_modified">Датою зміни</string>
+    <string name="sort_created">Датою створення</string>
+    <string name="sort_title">Назвою</string>
+    <string name="sort_size">Розміром</string>
+    <string name="sort_reverse">У зворотному порядку</string>
+    <string name="show_archived">Показувати архів</string>
+    <string name="group_folders">Теки спочатку</string>
+    <string name="folder_name">Назва теки</string>
+    <string name="folder_rename">Перейменувати теку</string>
+    <string name="folder_delete">Видалити теку</string>
+    <string name="folder_export">Експортувати теку</string>
+    <string name="folder_delete_q">Видалити «%1$s»?</string>
+    <string name="folder_delete_body">Її нотатки перемістяться в кошик.</string>
+    <string name="note_open">Відкрити</string>
+    <string name="notes_in_folder">%1$d у цій теці</string>
+    <string name="tags_title">Теги</string>
+    <string name="no_tags">Тегів ще немає</string>
+    <string name="import_from_folder">З теки</string>
+    <string name="import_from_folder_hint">Сховище Obsidian або будь-яка тека з Markdown</string>
+    <string name="import_from_zip">З архіву ZIP</string>
+    <string name="import_from_zip_hint">Зокрема експорт із Notion</string>
+    <string name="import_files">Окремі файли</string>
+    <string name="import_files_hint">Markdown, TeX, текст або CSV</string>
+    <string name="importing">Імпорт %1$s</string>
+    <string name="import_done">Імпортовано %1$d нотаток</string>
+    <string name="import_done_with_canvases">Імпортовано %1$d нотаток · %2$d полотен</string>
+    <string name="import_failed">Не вдалося імпортувати</string>
+    <string name="backup_created">Резервну копію створено</string>
+    <string name="grant_all_files">Надати повний доступ до файлів</string>
+    <string name="grant_all_files_hint">Потрібно для створення нотаток у Documents/Shard</string>
+    <string name="raw_markdown">Редагувати чистий Markdown</string>
+    <string name="raw_markdown_hint">Чистий текст Markdown</string>
+    <string name="find_replace">Знайти й замінити</string>
+    <string name="find_text">Знайти текст</string>
+    <string name="replace_with">Замінити на</string>
+    <string name="replace_all">Замінити все</string>
+    <string name="find_no_matches">Збігів не знайдено</string>
+    <string name="replaced_count">Замінено збігів: %1$d</string>
+
+    <!-- Граф, кошик, історія, налаштування -->
+    <string name="graph_fit">Вмістити на екран</string>
+    <string name="graph_local">Локальний</string>
+    <string name="graph_options">Граф</string>
+    <string name="graph_show_tags">Показувати теги</string>
+    <string name="graph_show_orphans">Показувати непов’язані</string>
+    <string name="graph_show_labels">Показувати підписи</string>
+    <string name="graph_show_whole_vault">Показати все сховище</string>
+    <string name="graph_depth">Глибина: %1$d кроки</string>
+    <string name="graph_stats">%1$d нотаток · %2$d зв’язків</string>
+    <string name="graph_building">Побудова…</string>
+    <string name="graph_node_meta">%1$d вихідних · %2$d вхідних</string>
+    <string name="graph_open_tag">Показати нотатки</string>
+    <string name="graph_create_note">Створити нотатку</string>
+    <string name="graph_empty_title">Ще нема що показати</string>
+    <string name="graph_empty_body">Введіть [[ у нотатці й оберіть ціль. Пов’язані нотатки з’являться тут, а теги лишаються у фільтрі.</string>
+    <string name="canvas_empty_tip">Подвійний дотик — картка · щипок — масштаб</string>
+    <string name="trash_title">Кошик</string>
+    <string name="trash_empty_title">Кошик порожній</string>
+    <string name="trash_empty_body">Видалені нотатки зберігаються %1$d днів.</string>
+    <string name="trash_restore">Відновити</string>
+    <string name="trash_delete_forever">Видалити назавжди</string>
+    <string name="trash_empty_action">Очистити кошик</string>
+    <string name="trash_empty_q">Очистити кошик?</string>
+    <string name="trash_empty_body_q">%1$d нотаток буде видалено назавжди.</string>
+    <string name="trash_deleted_at">Видалено %1$s</string>
+    <string name="restored">Відновлено</string>
+    <string name="bulk_restored">Відновлено нотаток: %1$d</string>
+    <string name="bulk_trash_delete_title">Остаточно видалити вибране з кошика?</string>
+    <string name="bulk_trash_delete_body">Нотаток буде остаточно видалено: %1$d.</string>
+    <string name="bulk_trash_deleted">Остаточно видалено: %1$d</string>
+    <string name="history_title">Історія версій</string>
+    <string name="history_empty_title">Попередніх версій немає</string>
+    <string name="history_empty_body">Знімки створюються під час редагування, не частіше ніж раз на кілька хвилин.</string>
+    <string name="history_restore">Відновити цю версію</string>
+    <string name="history_restore_q">Відновити цю версію?</string>
+    <string name="history_restore_body">Поточний текст спершу буде збережено як знімок, тож дію можна скасувати.</string>
+    <string name="history_preview">Перегляд</string>
+    <string name="history_diff">Порівняти з поточною</string>
+    <string name="history_delete">Видалити знімок</string>
+    <string name="history_current">Поточна</string>
+    <string name="history_restored">Версію відновлено</string>
+    <string name="settings_title">Налаштування</string>
+    <string name="settings_appearance">Вигляд</string>
+    <string name="settings_theme">Тема</string>
+    <string name="settings_theme_system">Як у системі</string>
+    <string name="settings_theme_light">Світла</string>
+    <string name="settings_theme_dark">Темна</string>
+    <string name="settings_theme_black">Чорна (AMOLED)</string>
+    <string name="settings_accent">Акцентний колір</string>
+    <string name="settings_dynamic">Кольори Material You</string>
+    <string name="settings_dynamic_hint">Використати палітру шпалер системи (Android 12+)</string>
+    <string name="settings_editor">Редактор</string>
+    <string name="settings_font_size">Розмір тексту</string>
+    <string name="settings_font_family">Шрифт</string>
+    <string name="settings_font_sans">Без засічок</string>
+    <string name="settings_font_serif">Із засічками</string>
+    <string name="settings_font_mono">Монопросторовий</string>
+    <string name="settings_wide_editor">Текст на всю ширину</string>
+    <string name="settings_wide_editor_hint">Якщо вимкнено, на широких екранах текст залишається у зручній колонці</string>
+    <string name="settings_autosave">Затримка автозбереження</string>
+    <string name="settings_autosave_hint">%1$d мс після припинення набору</string>
+    <string name="settings_behaviour">Поведінка</string>
+    <string name="settings_confirm_delete">Підтверджувати видалення</string>
+    <string name="settings_haptics">Тактильний відгук</string>
+    <string name="settings_trash_retention">Термін зберігання в кошику</string>
+    <string name="settings_trash_days">Зберігати кошик %1$d днів</string>
+    <string name="settings_storage">Сховище</string>
+    <string name="settings_vault_path">Тека сховища</string>
+    <string name="settings_reindex">Перечитати сховище</string>
+    <string name="settings_reindex_hint">Підхопити файли, змінені іншими застосунками</string>
+    <string name="settings_reindexed">Сховище перечитано: %1$d нотаток</string>
+    <string name="settings_about">Про застосунок</string>
+    <string name="settings_version">Версія %1$s</string>
+    <string name="settings_reset">Скинути налаштування</string>
+    <string name="settings_reset_q">Скинути всі налаштування?</string>
+    <string name="settings_reset_body">Нотатки не буде змінено.</string>
+    <string name="settings_notes_stat">%1$d нотаток · %2$d тегів · %3$d зв’язків</string>
+
+    <string name="storage_locked_title">Documents/Shard потребує доступу</string>
+    <string name="storage_locked_body">Надайте доступ до файлів, щоб нотатки створювалися в Documents/Shard і були видимі поза застосунком.</string>
+    <string name="storage_locked_action">Дозволити</string>
+    <string name="dismiss">Закрити</string>
+
+    <string name="storage_at">Нотатки в %1$s</string>
+    <string name="vault_move_shared">Перенести сховище в Documents/Shard</string>
+    <string name="vault_move_shared_hint">Дозволяє іншим Markdown-застосункам редагувати ті самі файли</string>
+    <string name="vault_move_private">Перенести сховище в теку застосунку</string>
+    <string name="vault_move_private_hint">Рекомендовано: доступ ніколи не втрачається</string>
+    <string name="vault_move_q">Перенести сховище?</string>
+    <string name="vault_move_body">Усі нотатки буде скопійовано в %1$s, після чого застосунок перезапуститься. Якщо не впевнені — спершу зробіть резервну копію.</string>
+    <string name="vault_move_confirm">Перенести</string>
+    <string name="vault_moved">Сховище перенесено</string>
+    <string name="vault_move_failed">Не вдалося перенести сховище</string>
+    <string name="vault_moving_documents">Перенесення нотаток у Documents/Shard…</string>
+
+    <string name="welcome_note_title">Початок роботи</string>
+    <string name="welcome_note_body">Shard зберігає нотатки у звичайних файлах Markdown. Жодного замикання: кожна нотатка — це файл `.md`, який можна скопіювати, синхронізувати чи відкрити в іншому редакторі.\n\n## Натисніть / для будь-чого\n\nНа порожньому рядку введіть `/` — палітра блоків відкриється просто біля курсора. Спробуйте `/table`, `/todo`, `/code` або `/callout`.\n\n- [ ] Створіть таке завдання\n- [x] Прочитайте цю нотатку\n\n## Скорочення Markdown\n\nПочніть рядок із `# ` для заголовка, `- ` для списку, `1. ` для нумерованого списку, `&gt; ` для цитати або ``` для коду. Маркер зникає, щойно блок змінюється.\n\n## Тримайте, щоб діяти\n\nЗатисніть ручку ліворуч від блоку, щоб перетворити, перемістити, дублювати чи видалити його. Затисніть рамку таблиці — або смужку над стовпцем і ліворуч від рядка — щоб отримати її власні дії. Меню з’являються поруч, а не на весь екран.\n\n## Пов’язуйте нотатки\n\nПишіть [[подвійні дужки]], щоб зробити посилання, і #теги будь-де в тексті. Зворотні посилання показані внизу кожної нотатки, а граф показує, як усе пов’язано.\n\n&gt; [!tip] Нічого зберігати\n&gt; Зміни записуються за мить після того, як ви припините друкувати. Кнопки «Зберегти» немає.\n\n| Що | Де |\n| :- | :- |\n| Імпортувати сховище | Меню → Імпорт |\n| Зробити резервну копію | Меню → Резервна копія |\n| Експортувати нотатку | ⋮ → Експорт |</string>
+
+    <!-- Постійне полотно -->
+    <string name="canvas_default_title">Полотно</string>
+    <string name="canvas_loading">Відкриття полотна…</string>
+    <string name="canvas_options">Дії з полотном</string>
+    <string name="canvas_switch">Полотна</string>
+    <string name="canvas_new">Нове полотно</string>
+    <string name="canvas_add_text">Додати текстову картку</string>
+    <string name="canvas_add_note">Додати нотатку</string>
+    <string name="canvas_edit_text">Редагувати текстову картку</string>
+    <string name="canvas_text_card">Текстова картка</string>
+    <string name="canvas_connect">З’єднати з іншою карткою</string>
+    <string name="canvas_connect_hint">Торкніться іншої картки, щоб додати або прибрати зв’язок</string>
+    <string name="canvas_clear">Очистити полотно</string>
+    <string name="canvas_clear_q">Очистити це полотно?</string>
+    <string name="canvas_clear_body">Усі картки та зв’язки на ньому буде видалено.</string>
+    <string name="canvas_delete">Видалити полотно</string>
+    <string name="canvas_delete_q">Видалити це полотно?</string>
+    <string name="canvas_delete_body">«%1$s» буде видалено назавжди.</string>
+    <string name="canvas_zoom_in">Збільшити</string>
+    <string name="canvas_zoom_out">Зменшити</string>
+    <string name="canvas_fit">Умістити полотно на екрані</string>
+    <string name="canvas_no_notes">Створіть нотатку, перш ніж додавати її на полотно</string>
+    <string name="canvas_load_failed">Не вдалося відкрити полотно</string>
+    <string name="canvas_save_failed">Не вдалося зберегти полотно</string>
+    <string name="canvas_create_failed">Не вдалося створити полотно</string>
+    <string name="canvas_delete_failed">Не вдалося видалити полотно</string>
+    <string name="canvas_name_conflict">Полотно з такою назвою вже існує</string>
+    <string name="canvas_add_image">Додати зображення</string>
+    <string name="canvas_add_group">Додати групу</string>
+    <string name="canvas_edit_group">Змінити назву групи</string>
+    <string name="canvas_color">Колір картки</string>
+    <string name="canvas_color_default">Типовий</string>
+    <string name="canvas_color_red">Червоний</string>
+    <string name="canvas_color_orange">Помаранчевий</string>
+    <string name="canvas_color_yellow">Жовтий</string>
+    <string name="canvas_color_green">Зелений</string>
+    <string name="canvas_color_blue">Синій</string>
+    <string name="canvas_color_purple">Фіолетовий</string>
+    <string name="canvas_resize">Змінити розмір</string>
+    <string name="canvas_size_small">Мала</string>
+    <string name="canvas_size_medium">Середня</string>
+    <string name="canvas_size_large">Велика</string>
+    <string name="canvas_edge_label">Підпис зв’язку</string>
+    <string name="canvas_choose_connection">Оберіть зв’язок</string>
+    <string name="canvas_no_connections">Ця картка ще не має зв’язків</string>
+    <string name="canvas_draw">Малювати</string>
+    <string name="canvas_select_cards">Вибрати кілька карток</string>
+    <string name="canvas_selected_cards">Вибрано карток: %1$d</string>
+    <string name="canvas_auto_align">Автовирівняти картки</string>
+    <string name="canvas_group_selection">Згрупувати вибрані картки</string>
+    <string name="canvas_link_note">Прив’язати до нотатки</string>
+    <string name="canvas_unlink_note">Прибрати прив’язку</string>
+    <string name="canvas_open_linked_note">Відкрити прив’язану нотатку</string>
+    <string name="canvas_search">Пошук по полотну</string>
+    <string name="canvas_search_hint">Текст, назва картки чи нотатки…</string>
+    <string name="canvas_search_empty">Відповідних карток немає</string>
+    <string name="canvas_search_results">Збігів: %1$d</string>
+    <string name="canvas_templates">Шаблон дошки</string>
+    <string name="canvas_template_blank">Порожнє полотно</string>
+    <string name="canvas_template_kanban">Канбан-дошка</string>
+    <string name="canvas_template_project">План проєкту</string>
+    <string name="canvas_template_mind_map">Ментальна мапа</string>
+
+    <string name="graph_min_links">≥ %1$d зв’язків</string>
+    <string name="command_new_tex">Новий TeX-файл</string>
+    <string name="tex_editor_hint">Код LaTeX…</string>
+    <string name="export_tex_source">Код TeX (.tex)</string>
+    <string name="new_markdown_note">Markdown-нотатка (.md)</string>
+    <string name="new_markdown_note_hint">Блоковий редактор із форматуванням</string>
+    <string name="new_tex_note_hint">Редактор вихідного коду LaTeX</string>
+
+    <string name="lint_unexpected_brace">Незакрита фігурна дужка</string>
+    <string name="lint_unclosed_brace">Ця дужка ніде не закрита</string>
+    <string name="lint_unclosed_environment">\begin{%1$s} ніде не закрито</string>
+    <string name="lint_unexpected_end">\end{%1$s} без відповідного \begin</string>
+    <string name="lint_mismatched_end">Тут очікується \end{%1$s}</string>
+    <string name="lint_unclosed_math">Математику ніде не закрито</string>
+    <string name="lint_problems">%1$d проблем</string>
+    <string name="symbols_bar">Символи</string>
+    <string name="insert_symbol">Вставити %1$s</string>
+    <string name="preview_toggle">Перегляд</string>
+    <string name="preview_hide">Сховати перегляд</string>
+    <string name="preview_title">Перегляд</string>
+    <string name="preview_math_hint">Математика показана як код</string>
+
+    <string name="split_divider">Змінити розмір панелей</string>
+    <string name="tex_compiled">Скомпільовано</string>
+    <string name="tex_compiling">Компіляція…</string>
+    <string name="open_pdf_viewer">Перейти до PDF</string>
+    <string name="page_indicator">%1$d із %2$d</string>
+
+    <!-- Документація Markdown і TeX -->
+    <string name="nav_help">Довідка</string>
+    <string name="nav_docs_md_tex">Markdown і TeX</string>
+    <string name="docs_title">Довідка: Markdown і TeX</string>
+    <string name="docs_intro">Це коротка шпаргалка для файлів, які відкриваються у Shard. Markdown (.md) використовує блоковий редактор, а TeX (.tex) — редактор вихідного коду LaTeX із живим переглядом і експортом у PDF. Обидва формати залишаються звичайними текстовими файлами у сховищі.</string>
+    <string name="docs_md_title">Markdown (.md)</string>
+    <string name="docs_md_intro">Під час відкриття Markdown-нотатка розбирається на блоки, а під час збереження записується назад як звичайний Markdown. У сфокусованому блоці маркери джерела залишаються видимими; у режимі читання вони форматуються й ховаються.</string>
+    <string name="docs_source_label">Джерело</string>
+    <string name="docs_display_label">Відображення</string>
+    <string name="docs_md_shortcuts_title">Швидкі тригери Markdown</string>
+    <string name="docs_md_slash_title">Slash-команди</string>
+    <string name="docs_md_mapping"><![CDATA[# Заголовок → заголовок 1-го рівня\n## Заголовок → заголовок 2-го рівня\n### Заголовок → заголовок 3-го рівня\n**жирний** → жирний текст\n*курсив* → курсивний текст\n~~закреслений~~ → закреслений текст\n==виділений== → підсвічений текст\n`код` → моноширинний код\n- пункт → маркований список\n1. пункт → нумерований список\n- [ ] справа → незавершене завдання\n- [x] готово → виконане завдання\n> цитата → блок цитати\n> [!warning] Увага → кольорова виноска\n[текст](https://example.com) → клікабельне вебпосилання\n[[Назва нотатки]] → посилання на нотатку і зворотні посилання\n#тег → кольоровий тег і фільтр тегів\n![опис](image.png) → блок зображення в окремому рядку\n| A | B | → таблиця, якщо далі є рядок-роздільник\n```lang → блок коду з необов’язковим підсвічуванням мови\n--- → горизонтальний роздільник]]></string>
+    <string name="docs_md_shortcuts"><![CDATA[На початку порожнього рядка введіть маркер і пробіл: #, ##, ###, -, *, +, 1., 1), [ ], [x], >. Три зворотні лапки ``` створюють блок коду; --- або *** — роздільник. Shard прибирає тригер із блоку й зберігає результат як звичайний Markdown.]]></string>
+    <string name="docs_md_slash"><![CDATA[У порожньому блоці введіть /, щоб відкрити палітру команд. Шукайте за цими назвами або українськими псевдонімами:\n/text → абзац\n/h1, /h2, /h3 → заголовки\n/bullet → маркований список\n/numbered → нумерований список\n/todo → завдання з прапорцем\n/table → редагована таблиця\n/code → блок коду\n/quote → цитата\n/callout → виноска note/tip/warning\n/divider → горизонтальний роздільник\n/image → блок зображення\n/link → посилання на іншу нотатку\n/tag → тег\n/date → сьогоднішня дата]]></string>
+    <string name="docs_md_notes">Таблиці, завдання, виноски, wiki-посилання, теги й зображення зберігаються як Markdown, тому їх можна резервувати або відкривати в іншій Markdown-програмі. Задача також може мати читабельні inline-метадані планування: @priority(high), 📅 2030-04-05, @time(09:00), @remind(08:45) і @repeat(weekly). HTML та непідтримуваний Markdown залишаються як звичайний текст, а не видаляються.</string>
+    <string name="docs_tex_title">TeX / LaTeX (.tex)</string>
+    <string name="docs_tex_intro">TeX-файл відкривається у редакторі вихідного коду. Введіть зворотну скісну риску, щоб побачити підказки команд. Права панель — швидке візуальне наближення підтримуваної частини LaTeX; експорт PDF використовує той самий розбір і не запускає повний дистрибутив TeX.</string>
+    <string name="docs_tex_structure_title">Структура документа</string>
+    <string name="docs_symbols_title">Спеціальні математичні символи</string>
+    <string name="docs_tex_structure"><![CDATA[\\documentclass{article}\n\\usepackage{...}\n\\begin{document}\n  \\title{Назва}\n  \\author{Автор}\n  \\date{2026}\n  \\maketitle\n  ...текст...\n\\end{document}]]></string>
+    <string name="docs_tex_mapping"><![CDATA[\\section{Назва} → нумерований заголовок розділу\n\\subsection{Назва} → заголовок підрозділу\n\\textbf{жирний} → жирний текст\n\\textit{курсив}, \\emph{курсив} → курсивний текст\n\\underline{текст} → підкреслений текст\n\\texttt{код}, \\verb|код| → моноширинний текст\n$R \\leq 1$ → вбудована математика, наприклад R ≤ 1\n\\begin{equation} ... \\end{equation} → центрована формула з номером\n\\frac{a}{b} → дріб усередині формули\n\\begin{itemize} + \\item → маркований список\n\\begin{enumerate} + \\item → нумерований список\n\\begin{tabular}{...} → намальована таблиця\n\\begin{figure} + tikzpicture → векторний графік і підпис\n\\tableofcontents → автоматично створений зміст\n\\label{key}, \\ref{key} → номер перехресного посилання\n\\pageref{key} → маркер посилання на сторінку\n\\cite{key} → нумерована цитата\n\\href{url}{текст}, \\url{url} → підкреслене посилання\n\\clearpage, \\newpage → розрив сторінки\n\\begin{landscape} ... → альбомна сторінка/таблиця]]></string>
+    <string name="docs_tex_symbols"><![CDATA[\\alpha → α    \\beta → β    \\gamma → γ    \\Delta → Δ\n\\to → →       \\leq → ≤     \\geq → ≥     \\neq → ≠\n\\approx → ≈   \\equiv → ≡   \\infty → ∞   \\pm → ±\n\\times → ×    \\cdot → ·    \\int → ∫     \\sum → ∑\n\\prod → ∏     \\partial → ∂ \\nabla → ∇   \\in → ∈\n\\notin → ∉    \\subseteq → ⊆ \\forall → ∀  \\exists → ∃\n_{i} → ᵢ      _{action} → ₐ𝚌ₜᵢₒₙ      _{rec} → ᵣₑ𝚌]]></string>
+    <string name="docs_tex_rules"><![CDATA[Перегляд розуміє перелічені вище середовища й команди, а також поширені команди відступів, списків, бібліографії та преамбули. Команди на кшталт \\usepackage, \\geometry, \\label і \\newcommand використовуються лише для розбору документа або ховаються у візуальному результаті. Невідомі команди з аргументом у фігурних дужках показують сам аргумент як текст. Червоне підкреслення означає незакриту дужку, середовище або математичний роздільник; виправте це перед експортом.]]></string>
+    <string name="docs_footer">Порада: тримайте поруч маленьку тестову нотатку. Живий перегляд навмисно швидкий, а завантажений PDF є канонічним результатом верстки сторінок.</string>
+    <string name="navigate_back">Попередня нотатка</string>
+    <string name="navigate_forward">Наступна нотатка</string>
+    <string name="open_file_picker">Відкрити файл</string>
+    <string name="open_file_picker_hint">Виберіть Markdown або TeX через системний засіб</string>
+    <string name="drag_note_to_folder">Затримайте й перетягніть у папку</string>
+    <string name="note_moved_to_folder">Переміщено до %1$s</string>
+    <string name="filter_block_type">Тип блока</string>
+    <string name="filter_date">Дата змінення</string>
+    <string name="filter_all">Усі</string>
+    <string name="filter_headings">Заголовки</string>
+    <string name="filter_lists">Списки</string>
+    <string name="filter_tasks">Завдання</string>
+    <string name="filter_code">Блоки коду</string>
+    <string name="filter_tables">Таблиці</string>
+    <string name="filter_images">Зображення</string>
+    <string name="filter_quotes">Цитати</string>
+    <plurals name="filter_last_days"><item quantity="one">Останній %d день</item><item quantity="few">Останні %d дні</item><item quantity="many">Останні %d днів</item><item quantity="other">Останні %d дня</item></plurals>
+    <string name="automatic_backups">Автоматичні резервні копії vault</string>
+    <string name="automatic_backup_none">ZIP усього середовища — нотаток, canvas, вкладень, історії та кошика — створюватиметься автоматично щодня</string>
+    <plurals name="automatic_backup_count"><item quantity="one">%d ротаційна ZIP-копія</item><item quantity="few">%d ротаційні ZIP-копії</item><item quantity="many">%d ротаційних ZIP-копій</item><item quantity="other">%d ZIP-копії</item></plurals>
+    <string name="backup_create_now">Створити копію зараз</string>
+    <string name="backup_share_latest">Поділитися останнім ZIP</string>
+    <string name="backup_clear_all">Видалити автоматичні копії</string>
+    <string name="backup_clear_confirm">Усі локальні автоматичні ZIP-копії буде видалено.</string>
+    <string name="backup_creating">Створення ZIP усього середовища…</string>
+    <string name="crash_reports">Звіти про збої</string>
+    <plurals name="crash_report_count"><item quantity="one">%d локальний звіт</item><item quantity="few">%d локальні звіти</item><item quantity="many">%d локальних звітів</item><item quantity="other">%d звіту</item></plurals>
+    <string name="crash_share_latest">Поділитися останнім звітом</string>
+    <string name="crash_clear">Видалити звіти про збої</string>
+    <string name="crash_clear_confirm">Усі локальні звіти про збої буде видалено.</string>
+
+    <!-- Cloud mirror -->
+    <string name="cloud_connect">Копія у хмарі</string>
+    <string name="cloud_connect_hint">Вивантажувати кожне збереження в Google Drive</string>
+    <string name="cloud_google_drive">Google Drive</string>
+    <string name="cloud_dropbox">Dropbox</string>
+    <string name="cloud_no_account">Вхід не виконано</string>
+    <string name="cloud_no_accounts">На пристрої немає акаунта Google</string>
+    <string name="cloud_folder">Папка у хмарі</string>
+    <string name="cloud_connecting">Перевіряю доступ\u2026</string>
+    <string name="cloud_connected">Копію у хмарі ввімкнено</string>
+    <string name="cloud_consent_declined">Доступ не надано</string>
+    <string name="cloud_sync_now">Вивантажити зараз</string>
+    <string name="cloud_syncing">Вивантажую\u2026</string>
+    <string name="cloud_pending">%1$d очікує вивантаження</string>
+    <string name="cloud_rename_folder">Назва папки у хмарі</string>
+    <string name="cloud_rename_folder_hint">Куди дзеркалиться сховище</string>
+    <string name="cloud_rename_folder_dialog">Уже вивантажені файли залишаться в старій папці.</string>
+    <string name="cloud_disconnect">Вимкнути копію у хмарі</string>
+    <string name="cloud_disconnect_hint">Вивантаження припиниться; файли у хмарі залишаться</string>
+    <string name="cloud_disconnect_confirm">Shard припинить вивантажувати зміни. Нотатки, які вже у хмарі, залишаться недоторканими.</string>
+    <string name="cloud_failed">Не вдалося вивантажити</string>
+    <string name="cloud_auth_failed">Увійдіть знову, щоб продовжити вивантаження</string>
+    <string name="cloud_network_failed">Немає зʼєднання</string>
+    <string name="cloud_quota_failed">У хмарі немає місця</string>
+    <string name="cloud_rate_limited">Хмара обмежує запити; спробую пізніше</string>
+    <string name="cloud_not_configured">Копію у хмарі не налаштовано</string>
+</resources>

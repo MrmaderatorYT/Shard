@@ -1,0 +1,923 @@
+<resources>
+    <string name="app_name">Shard</string>
+    <string name="widget_description">Quick note creation</string>
+    <string name="appwidget_provider">Quick Note</string>
+
+    <!-- General -->
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
+    <string name="save">Save</string>
+    <string name="preview">Preview</string>
+    <string name="split">Split</string>
+    <string name="search_hint">Search notes...</string>
+
+    <!-- Main Activity -->
+    <string name="no_notes_yet">No notes yet</string>
+    <string name="tap_to_create_first_note">Tap + to create your first note</string>
+    <string name="new_folder_btn">+ Folder</string>
+    <string name="new_folder_title">New folder</string>
+    <string name="rename_folder_title">Rename folder</string>
+    <string name="enter_folder_name">Enter folder name</string>
+    <string name="folder_already_exists">Folder already exists</string>
+    <string name="invalid_folder_name">Invalid folder name</string>
+    <string name="create_folder">Create</string>
+    
+    <string name="new_note_title">New note</string>
+    <string name="enter_note_title">Note title</string>
+    
+    <string name="manage_tags">Manage tags</string>
+    <string name="create_new_tag">Create new tag</string>
+    <string name="emoji">Emoji</string>
+    <string name="color">Color</string>
+    <string name="move_to_folder">Move to folder</string>
+    
+    <string name="sort_by">Sort by</string>
+    <string name="sort_title_asc">Title (A-Z)</string>
+    <string name="sort_title_desc">Title (Z-A)</string>
+    <string name="sort_date_modified_desc">Date modified (newest)</string>
+    <string name="sort_date_modified_asc">Date modified (oldest)</string>
+    <string name="sort_date_created_desc">Date created (newest)</string>
+    <string name="sort_date_created_asc">Date created (oldest)</string>
+    <string name="sort_custom">Custom</string>
+    
+    <string name="delete_note_confirm">Are you sure you want to delete this note?</string>
+    
+    <!-- Main Bottom Sheet Menu -->
+    <string name="menu_title">Shard Menu</string>
+    <string name="menu_recent_notes">Recent notes</string>
+    <string name="menu_bookmarks">Bookmarks</string>
+    <string name="menu_export_folder_zip">Export folder (ZIP)</string>
+    <string name="menu_backup_all">Backup all</string>
+    <string name="menu_trash">Trash</string>
+    <string name="menu_settings">Settings</string>
+    
+    <!-- Messages / Toast -->
+    <string name="folder_exported_success">Folder exported successfully: %1$s</string>
+    <string name="failed_to_export_folder">Failed to export folder</string>
+    <string name="all_notes_backed_up_success">All notes backed up successfully to %1$s</string>
+    <string name="failed_to_create_backup">Failed to create backup</string>
+    <string name="failed_to_create_zip">Failed to create ZIP archive</string>
+    <string name="failed_to_create_pdf">Failed to create PDF</string>
+    <string name="failed_to_create_html">Failed to create HTML</string>
+    
+    <!-- Quick Switch / Search -->
+    <string name="quick_switch">Quick Switch</string>
+    <string name="no_notes_found">No notes found</string>
+    
+    <!-- Graph -->
+    <string name="no_links_yet">No links yet</string>
+    <string name="create_links_to_see_graph">Create notes with [[wiki links]] to see the graph</string>
+    
+    <!-- Trash Activity -->
+    <string name="trash">Trash</string>
+    <string name="trash_empty">Trash is empty</string>
+    <string name="empty_trash">Empty trash</string>
+    <string name="empty_trash_confirm">Are you sure you want to permanently delete all notes in trash?</string>
+    <string name="restore_note">Restore note</string>
+    <string name="restore_note_confirm">Do you want to restore this note?</string>
+    
+    <!-- Vault -->
+    <string name="no_notes_yet_tap_to_create">No notes yet.\nTap + to create one.</string>
+    
+    <!-- Version History -->
+    <string name="version_history">Version History</string>
+    <string name="no_versions_yet">No versions yet</string>
+    <string name="versions_saved_automatically">Versions are saved automatically when you edit</string>
+    <string name="current_version">CURRENT</string>
+    <string name="restore_version_title">Restore version?</string>
+    <string name="restore_version_confirm">Are you sure you want to restore this version? Current changes will be saved.</string>
+    <string name="delete_version_title">Delete version?</string>
+    <string name="delete_version_confirm">Are you sure you want to delete this version?</string>
+    <string name="changes_title">Changes: %1$s → %2$s</string>
+    <string name="version_label">Version: %1$s</string>
+
+    <!-- Editor -->
+    <string name="editor">Editor</string>
+    <string name="editor_menu_title">Editor Menu</string>
+    <string name="export_markdown">Export Markdown</string>
+    <string name="export_zip">Export ZIP with images</string>
+    <string name="export_pdf">Export PDF</string>
+    <string name="export_html">Export HTML</string>
+    <string name="export_note_title">Export note</string>
+    <string name="statistics">Statistics</string>
+    
+    <string name="insert_link_title">Insert Wiki Link</string>
+    <string name="enter_note_title_to_link">Enter note title to link:</string>
+    
+    <string name="word_count_reading_time_format">%1$d words · %2$d min read</string>
+    
+    <!-- Settings -->
+    <string name="theme">Theme</string>
+    <string name="theme_auto">Auto</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_amoled">AMOLED</string>
+    <string name="material_you">Material You (dynamic colors)</string>
+    <string name="material_you_desc">Applies wallpaper colors on Android 12+</string>
+    <string name="accent">Accent</string>
+    <string name="display">Display</string>
+    <string name="fullscreen">Fullscreen</string>
+    <string name="status_bar">Status bar</string>
+    <string name="navigation_bar">Navigation bar</string>
+    <string name="font_size_label_format">Font: %1$dsp</string>
+    <string name="line_numbers">Line numbers</string>
+    <string name="word_wrap">Word wrap</string>
+    <string name="auto_save">Auto save</string>
+    <string name="auto_save_interval_format">Auto-save: %1$ds</string>
+    <string name="syntax_theme">Syntax Theme</string>
+    <string name="about">About</string>
+    <string name="about_desc">Shard - Mobile note-taking with wiki links, graph view, and canvas.</string>
+    <string name="about_version_label">v1.0</string>
+    
+    <!-- Widget -->
+    <string name="new_note_widget">New note</string>
+
+    <!-- Bottom Nav and Toolbars -->
+    <string name="nav_notes">Notes</string>
+    <string name="nav_graph">Graph</string>
+    <string name="nav_canvas">Canvas</string>
+    <string name="share_vault">Share Vault</string>
+    <string name="graph_view">Graph View</string>
+    <string name="quick_switch_title">Quick switch</string>
+    <string name="menu_title_option">Menu</string>
+    <string name="search">Search</string>
+
+    <!-- Statistics -->
+    <string name="stats_words">Words: %1$d</string>
+    <string name="stats_chars">Characters: %1$d</string>
+    <string name="stats_chars_no_spaces">Characters (no spaces): %1$d</string>
+    <string name="stats_sentences">Sentences: %1$d</string>
+    <string name="stats_paragraphs">Paragraphs: %1$d</string>
+    <string name="stats_headings">Headings: %1$d</string>
+    <string name="stats_images">Images: %1$d</string>
+    <string name="stats_links">Links: %1$d</string>
+    <string name="stats_wiki_links">Wiki links: %1$d</string>
+    <string name="stats_code_blocks">Code blocks: %1$d</string>
+    <string name="stats_list_items">List items: %1$d</string>
+    <string name="stats_reading_time">Reading time: ~%1$d min</string>
+    <string name="stats_reading_time_mins">Reading time: ~%1$d minutes</string>
+    <string name="stats_section_content">📝 Content</string>
+    <string name="stats_section_structure">🏗️ Structure</string>
+    <string name="stats_section_connections">🔗 Connections</string>
+    
+    <string name="summary_words">%1$d words</string>
+    <string name="summary_chars">%1$d chars</string>
+    <string name="summary_reading_time">~%1$d min read</string>
+    <string name="summary_format">%1$s · %2$s · %3$s</string>
+
+    <!-- MainActivity Option Dialog Strings -->
+    <string name="option_pin_unpin">Pin / Unpin</string>
+    <string name="option_bookmark">Bookmark</string>
+    <string name="option_tags">Tags</string>
+    <string name="option_emoji">Emoji</string>
+    <string name="option_color">Color</string>
+    <string name="option_duplicate">Duplicate</string>
+    <string name="option_move_to_folder">Move to folder</string>
+    
+    <string name="note_pinned">Pinned</string>
+    <string name="note_unpinned">Unpinned</string>
+    <string name="note_deleted">Note deleted</string>
+    <string name="undo">Undo</string>
+    
+    <!-- Sort Options -->
+    <string name="sort_last_modified">Last modified</string>
+    <string name="sort_date_created">Date created</string>
+    <string name="sort_title_az">Title (A-Z)</string>
+    <string name="sort_title_za">Title (Z-A)</string>
+
+    <!-- Create Note templates and dialog -->
+    <string name="template_empty_note">Empty note</string>
+    <string name="template_daily_note">Daily note</string>
+    <string name="template_meeting_notes">Meeting notes</string>
+    <string name="template_project_plan">Project plan</string>
+    <string name="template_book_notes">Book notes</string>
+    
+    <string name="tag_name_hint">Tag name (without #)</string>
+    <string name="new_tag">New tag</string>
+    <string name="delete_note_title_confirm">Delete \"%1$s\"?</string>
+    <string name="root_notes_folder">Root (notes/)</string>
+    <string name="moved_to_folder">Moved to %1$s</string>
+    <string name="moved_to_root">root</string>
+    <string name="note_duplicated">Note duplicated</string>
+    <string name="copy_suffix"> (copy)</string>
+    
+    <!-- Version History options -->
+    <string name="option_view">View</string>
+    <string name="option_compare_with_previous">Compare with previous</string>
+    <string name="restore">Restore</string>
+    <string name="restore_version_description">This will replace the current note content with this version.</string>
+    
+    <!-- Editor Activity strings -->
+    <string name="quick_note">Quick note</string>
+    <string name="edit">Edit</string>
+    <string name="note_restored">Note restored</string>
+
+    <!-- Colors -->
+    <string-array name="color_names">
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Purple</item>
+        <item>Orange</item>
+        <item>Teal</item>
+        <item>Pink</item>
+        <item>Indigo</item>
+        <item>Cyan</item>
+        <item>Deep Orange</item>
+        <item>Brown</item>
+        <item>Grey</item>
+    </string-array>
+
+    <!-- Additional Dialog Strings -->
+    <string name="export">Export</string>
+    <string name="no_recent_notes">No recent notes</string>
+    <string name="clear_history">Clear history</string>
+    <string name="no_bookmarks">No bookmarked notes</string>
+    <string name="restore_note_title_confirm">Restore \"%1$s\"?</string>
+
+    <!-- Block editor, slash commands, tables -->
+    <string name="block_options">Block options</string>
+    <string name="toggle_task">Toggle task</string>
+    <string name="hint_paragraph">Write, or press / for commands</string>
+    <string name="hint_heading">Heading</string>
+    <string name="hint_code">Code</string>
+    <string name="code_language">Language</string>
+    <string name="code_language_plain">plain text</string>
+    <string name="copy_as_markdown">Copy as Markdown</string>
+    <string name="copied_code">Code copied</string>
+    <string name="copied_table">Table copied</string>
+    <string name="copied_note">Note copied</string>
+    <string name="slash_menu_title">Insert block</string>
+    <string name="slash_menu_empty">No matching command</string>
+    <string name="cmd_text">Text</string>
+    <string name="cmd_text_hint">Plain paragraph</string>
+    <string name="cmd_h1">Heading 1</string>
+    <string name="cmd_h1_hint">Large section title</string>
+    <string name="cmd_h2">Heading 2</string>
+    <string name="cmd_h2_hint">Medium section title</string>
+    <string name="cmd_h3">Heading 3</string>
+    <string name="cmd_h3_hint">Small section title</string>
+    <string name="cmd_bullet">Bulleted list</string>
+    <string name="cmd_bullet_hint">A simple list</string>
+    <string name="cmd_numbered">Numbered list</string>
+    <string name="cmd_numbered_hint">An ordered list</string>
+    <string name="cmd_todo">To-do list</string>
+    <string name="cmd_todo_hint">Track tasks with checkboxes</string>
+    <string name="cmd_table">Table</string>
+    <string name="cmd_table_hint">Rows and columns you can edit</string>
+    <string name="cmd_code">Code block</string>
+    <string name="cmd_code_hint">Syntax-highlighted snippet</string>
+    <string name="cmd_quote">Quote</string>
+    <string name="cmd_quote_hint">Set text apart</string>
+    <string name="cmd_callout">Callout</string>
+    <string name="cmd_callout_hint">Highlight a note or warning</string>
+    <string name="cmd_divider">Divider</string>
+    <string name="cmd_divider_hint">Separate sections</string>
+    <string name="cmd_image">Image</string>
+    <string name="cmd_image_hint">Insert a picture</string>
+    <string name="cmd_link_note">Link to note</string>
+    <string name="cmd_link_note_hint">Insert a [[wiki link]]</string>
+    <string name="cmd_tag">Tag</string>
+    <string name="cmd_tag_hint">Insert a #tag</string>
+    <string name="cmd_date">Today’s date</string>
+    <string name="cmd_date_hint">Insert the current date</string>
+    <string name="table_menu_title">Table</string>
+    <string name="table_add_row">Add row</string>
+    <string name="table_add_column">Add column</string>
+    <string name="table_delete">Delete table</string>
+    <string name="table_clear">Clear contents</string>
+    <string name="table_row_handle">Row options</string>
+    <string name="table_column_handle">Column options</string>
+    <string name="table_header_hint">Header</string>
+    <string name="table_header_row">Header row</string>
+    <string name="table_row_n">Row %1$d</string>
+    <string name="table_column_n">Column %1$d</string>
+    <string name="table_insert_row_above">Insert row above</string>
+    <string name="table_insert_row_below">Insert row below</string>
+    <string name="table_insert_col_left">Insert column left</string>
+    <string name="table_insert_col_right">Insert column right</string>
+    <string name="table_delete_row">Delete row</string>
+    <string name="table_delete_column">Delete column</string>
+    <string name="table_move_up">Move up</string>
+    <string name="table_move_down">Move down</string>
+    <string name="table_move_left">Move left</string>
+    <string name="table_move_right">Move right</string>
+    <string name="align_left">Align left</string>
+    <string name="align_center">Align centre</string>
+    <string name="align_right">Align right</string>
+
+    <!-- Editor screen, note actions, export -->
+    <string name="redo">Redo</string>
+    <string name="share">Share</string>
+    <string name="untitled">Untitled</string>
+    <string name="indent">Indent</string>
+    <string name="outdent">Outdent</string>
+    <string name="hide_keyboard">Hide keyboard</string>
+    <string name="note_icon">Note icon</string>
+    <string name="words_count">%1$d words</string>
+    <string name="unresolved_links">Unlinked mentions</string>
+    <string name="tap_to_create">Tap to create this note</string>
+    <string name="export_failed">Export failed</string>
+    <string name="format_bold">Bold</string>
+    <string name="format_italic">Italic</string>
+    <string name="format_strike">Strikethrough</string>
+    <string name="format_code">Inline code</string>
+    <string name="format_link">Link</string>
+    <string name="read_mode">Reading view</string>
+    <string name="edit_mode">Editing view</string>
+    <string name="lock_editing">Lock editing</string>
+    <string name="unlock_editing">Unlock editing</string>
+    <string name="saved">Saved</string>
+    <string name="saving">Saving…</string>
+    <string name="save_failed">Could not save</string>
+    <string name="just_now">just now</string>
+    <string name="minutes_ago">%1$d min ago</string>
+    <string name="hours_ago">%1$d h ago</string>
+    <string name="days_ago">%1$d d ago</string>
+    <string name="block_turn_into">Turn into</string>
+    <string name="block_duplicate">Duplicate</string>
+    <string name="block_move_up">Move up</string>
+    <string name="block_move_down">Move down</string>
+    <string name="block_delete">Delete block</string>
+    <string name="block_copy">Copy text</string>
+    <string name="note_actions">Note actions</string>
+    <string name="note_rename">Rename</string>
+    <string name="note_move">Move to folder</string>
+    <string name="note_duplicate">Duplicate note</string>
+    <string name="note_pin">Pin</string>
+    <string name="note_unpin">Unpin</string>
+    <string name="note_star">Add to favourites</string>
+    <string name="note_unstar">Remove from favourites</string>
+    <string name="note_archive">Archive</string>
+    <string name="note_unarchive">Unarchive</string>
+    <string name="note_delete">Move to trash</string>
+    <string name="note_history">Version history</string>
+    <string name="note_info">Note info</string>
+    <string name="note_open_graph">Show in graph</string>
+    <string name="opened_notes">Opened notes</string>
+    <string name="go_to_heading">Go to heading</string>
+    <string name="open_note_alongside">Open note alongside</string>
+    <string name="close_second_note">Close second note</string>
+    <string name="no_headings">This note has no headings</string>
+    <string name="note_select">Select</string>
+    <string name="note_selected">Selected</string>
+    <string name="selection_cancel">Cancel selection</string>
+    <string name="selection_select_all">Select all visible notes</string>
+    <string name="selection_actions">Selection actions</string>
+    <string name="selected_notes_count">%1$d selected</string>
+    <string name="bulk_move">Move to folder</string>
+    <string name="bulk_add_tag">Add tag</string>
+    <string name="bulk_remove_tag">Remove tag</string>
+    <string name="bulk_tag_hint">Tag name, with or without #</string>
+    <string name="bulk_invalid_tag">Enter a valid tag name</string>
+    <string name="bulk_archive">Archive</string>
+    <string name="bulk_unarchive">Unarchive</string>
+    <string name="bulk_collection">Change collection</string>
+    <string name="bulk_collection_hint">Collection name; empty clears it</string>
+    <string name="bulk_collection_message">The value is stored as the portable collection property.</string>
+    <string name="bulk_export">Export selected</string>
+    <string name="bulk_export_title">Export selected notes</string>
+    <string name="bulk_export_subject">Selected Shard notes</string>
+    <string name="bulk_export_markdown">One Markdown document</string>
+    <string name="bulk_export_zip">ZIP archive</string>
+    <string name="bulk_delete">Move to trash</string>
+    <string name="bulk_delete_title">Move selected notes to trash?</string>
+    <string name="bulk_delete_body">%1$d notes will be moved to the trash and kept for %2$d days.</string>
+    <string name="bulk_moved">Moved %1$d notes</string>
+    <string name="bulk_tagged">Updated tags in %1$d notes</string>
+    <string name="bulk_archived">Archived %1$d notes</string>
+    <string name="bulk_unarchived">Unarchived %1$d notes</string>
+    <string name="bulk_collection_changed">Changed collection in %1$d notes</string>
+    <string name="bulk_deleted">Moved %1$d notes to trash</string>
+    <string name="bulk_operation_failed">Could not complete the bulk operation</string>
+    <string name="export_note">Export</string>
+    <string name="export_as_markdown">Markdown (.md)</string>
+    <string name="export_as_html">Web page (.html)</string>
+    <string name="export_as_pdf">PDF document</string>
+    <string name="export_as_text">Plain text (.txt)</string>
+    <string name="export_as_zip">ZIP archive</string>
+    <string name="export_save_to">Save to…</string>
+    <string name="export_share">Share…</string>
+    <string name="exported_ok">Exported</string>
+    <string name="link_note_title">Link to note</string>
+    <string name="link_note_search">Search notes</string>
+    <string name="link_note_create">Create "%1$s"</string>
+    <string name="add_tag">Add tag</string>
+    <string name="tag_name">Tag name</string>
+    <string name="insert_link_url">Link address</string>
+    <string name="insert_link_text">Link text</string>
+    <string name="pick_icon">Choose an icon</string>
+    <string name="remove_icon">Remove icon</string>
+    <string name="delete_note_q">Delete this note?</string>
+    <string name="delete_note_body">"%1$s" moves to the trash and can be restored for %2$d days.</string>
+    <string name="moved_to_trash">Moved to trash</string>
+
+    <plurals name="backlinks_count">
+        <item quantity="one">%1$d backlink</item>
+        <item quantity="other">%1$d backlinks</item>
+    </plurals>
+    <plurals name="notes_count">
+        <item quantity="one">%1$d note</item>
+        <item quantity="other">%1$d notes</item>
+    </plurals>
+
+    <!-- Home, drawer, import -->
+    <string name="back">Back</string>
+    <string name="open_navigation">Open navigation</string>
+    <string name="clear_search">Clear search</string>
+    <string name="sort_and_filter">Sort and filter</string>
+    <string name="new_note">New note</string>
+    <string name="import_notes">Import notes</string>
+    <string name="vault_root">Vault</string>
+    <string name="note_not_found">Note not found</string>
+    <string name="image_import_failed">Could not add the image</string>
+    <string name="cannot_open_link">No app can open this link</string>
+    <string name="rename_conflict">A note with that name already exists</string>
+    <string name="info_words">Words: %1$d</string>
+    <string name="info_characters">Characters: %1$d</string>
+    <string name="info_blocks">Blocks: %1$d</string>
+    <string name="info_created">Created: %1$s</string>
+    <string name="info_modified">Edited: %1$s</string>
+    <string name="info_path">File: %1$s</string>
+    <string name="nav_all_notes">All notes</string>
+    <string name="nav_favourites">Favourites</string>
+    <string name="nav_recent">Recent</string>
+    <string name="nav_tags">Tags</string>
+    <string name="nav_trash">Trash</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_folders">Folders</string>
+    <string name="nav_library">Library</string>
+    <string name="nav_vault">Vault</string>
+    <string name="nav_import">Import</string>
+    <string name="nav_export_vault">Back up vault</string>
+    <string name="nav_new_folder">New folder</string>
+    <string name="section_pinned">Pinned</string>
+    <string name="section_folders">Folders</string>
+    <string name="section_notes">Notes</string>
+    <string name="section_results">Results</string>
+    <string name="empty_vault_title">Your vault is empty</string>
+    <string name="empty_vault_body">Create your first note or import Markdown. Tip: long-press a note for actions; swipe it to pin or delete.</string>
+    <string name="empty_folder_title">Nothing here yet</string>
+    <string name="empty_folder_body">This folder has no notes. Tap + to create one here.</string>
+    <string name="empty_search_title">No matches</string>
+    <string name="empty_search_body">Nothing found for “%1$s”. Try a title, body phrase or #tag.</string>
+    <string name="empty_favourites_title">No favourites yet</string>
+    <string name="empty_favourites_body">Long-press a note and add it to favourites to find it here.</string>
+    <string name="empty_recent_title">No recent notes</string>
+    <string name="empty_recent_body">Notes you open will appear here.</string>
+    <string name="filter_tag">Tag: #%1$s</string>
+    <string name="filter_clear">Clear filter</string>
+    <string name="sort_modified">Last edited</string>
+    <string name="sort_created">Date created</string>
+    <string name="sort_title">Title</string>
+    <string name="sort_size">Size</string>
+    <string name="sort_reverse">Reverse order</string>
+    <string name="show_archived">Show archived</string>
+    <string name="group_folders">Folders first</string>
+    <string name="folder_name">Folder name</string>
+    <string name="folder_rename">Rename folder</string>
+    <string name="folder_delete">Delete folder</string>
+    <string name="folder_export">Export folder</string>
+    <string name="folder_delete_q">Delete “%1$s”?</string>
+    <string name="folder_delete_body">Its notes move to the trash.</string>
+    <string name="note_open">Open</string>
+    <string name="notes_in_folder">%1$d in this folder</string>
+    <string name="tags_title">Tags</string>
+    <string name="no_tags">No tags yet</string>
+    <string name="import_from_folder">From a folder</string>
+    <string name="import_from_folder_hint">An Obsidian vault or any Markdown folder</string>
+    <string name="import_from_zip">From a ZIP archive</string>
+    <string name="import_from_zip_hint">Including a Notion export</string>
+    <string name="import_files">Individual files</string>
+    <string name="import_files_hint">Markdown, TeX, text or CSV</string>
+    <string name="importing">Importing %1$s</string>
+    <string name="import_done">Imported %1$d notes</string>
+    <string name="import_done_with_canvases">Imported %1$d notes · %2$d canvases</string>
+    <string name="import_failed">Import failed</string>
+    <string name="backup_created">Backup created</string>
+    <string name="grant_all_files">Grant full file access</string>
+    <string name="grant_all_files_hint">Required to create notes in Documents/Shard</string>
+    <string name="raw_markdown">Edit raw Markdown</string>
+    <string name="raw_markdown_hint">Raw Markdown source</string>
+    <string name="find_replace">Find and replace</string>
+    <string name="find_text">Find text</string>
+    <string name="replace_with">Replace with</string>
+    <string name="replace_all">Replace all</string>
+    <string name="find_no_matches">No matches found</string>
+    <string name="replaced_count">Replaced %1$d occurrences</string>
+
+    <!-- Graph, trash, history, settings -->
+    <string name="graph_fit">Fit to screen</string>
+    <string name="graph_local">Local</string>
+    <string name="graph_options">Graph</string>
+    <string name="graph_show_tags">Show tags</string>
+    <string name="graph_show_orphans">Show unlinked notes</string>
+    <string name="graph_show_labels">Show labels</string>
+    <string name="graph_show_whole_vault">Show whole vault</string>
+    <string name="graph_depth">Depth: %1$d hops</string>
+    <string name="graph_stats">%1$d notes · %2$d links</string>
+    <string name="graph_building">Building…</string>
+    <string name="graph_node_meta">%1$d links out · %2$d in</string>
+    <string name="graph_open_tag">Show notes</string>
+    <string name="graph_create_note">Create note</string>
+    <string name="graph_empty_title">Nothing to plot yet</string>
+    <string name="graph_empty_body">Type [[ in a note and pick a target. Linked notes will appear here; tags stay in the filter.</string>
+    <string name="canvas_empty_tip">Double-tap to add a card · pinch to zoom</string>
+    <string name="trash_title">Trash</string>
+    <string name="trash_empty_title">Trash is empty</string>
+    <string name="trash_empty_body">Deleted notes stay here for %1$d days.</string>
+    <string name="trash_restore">Restore</string>
+    <string name="trash_delete_forever">Delete permanently</string>
+    <string name="trash_empty_action">Empty trash</string>
+    <string name="trash_empty_q">Empty the trash?</string>
+    <string name="trash_empty_body_q">%1$d notes will be deleted permanently.</string>
+    <string name="trash_deleted_at">Deleted %1$s</string>
+    <string name="restored">Restored</string>
+    <string name="bulk_restored">Restored %1$d notes</string>
+    <string name="bulk_trash_delete_title">Delete selected trash entries permanently?</string>
+    <string name="bulk_trash_delete_body">%1$d notes will be deleted permanently.</string>
+    <string name="bulk_trash_deleted">Deleted permanently: %1$d</string>
+    <string name="history_title">Version history</string>
+    <string name="history_empty_title">No earlier versions</string>
+    <string name="history_empty_body">Snapshots are kept as you edit, at most one every few minutes.</string>
+    <string name="history_restore">Restore this version</string>
+    <string name="history_restore_q">Restore this version?</string>
+    <string name="history_restore_body">The current text is snapshotted first, so this can be undone.</string>
+    <string name="history_preview">Preview</string>
+    <string name="history_diff">Compare with current</string>
+    <string name="history_delete">Delete snapshot</string>
+    <string name="history_current">Current</string>
+    <string name="history_restored">Version restored</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_system">Follow system</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_black">Black (AMOLED)</string>
+    <string name="settings_accent">Accent colour</string>
+    <string name="settings_dynamic">Material You colours</string>
+    <string name="settings_dynamic_hint">Use the system wallpaper palette (Android 12+)</string>
+    <string name="settings_editor">Editor</string>
+    <string name="settings_font_size">Text size</string>
+    <string name="settings_font_family">Font</string>
+    <string name="settings_font_sans">Sans</string>
+    <string name="settings_font_serif">Serif</string>
+    <string name="settings_font_mono">Monospace</string>
+    <string name="settings_wide_editor">Full-width text</string>
+    <string name="settings_wide_editor_hint">Off keeps a comfortable reading column on wide screens</string>
+    <string name="settings_autosave">Autosave delay</string>
+    <string name="settings_autosave_hint">%1$d ms after you stop typing</string>
+    <string name="settings_behaviour">Behaviour</string>
+    <string name="settings_confirm_delete">Confirm before deleting</string>
+    <string name="settings_haptics">Haptic feedback</string>
+    <string name="settings_trash_retention">Trash retention</string>
+    <string name="settings_trash_days">Keep trash for %1$d days</string>
+    <string name="settings_storage">Storage</string>
+    <string name="settings_vault_path">Vault folder</string>
+    <string name="settings_reindex">Rescan vault</string>
+    <string name="settings_reindex_hint">Pick up files changed by other apps</string>
+    <string name="settings_reindexed">Vault rescanned: %1$d notes</string>
+    <string name="settings_about">About</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="settings_reset">Reset settings</string>
+    <string name="settings_reset_q">Reset all settings?</string>
+    <string name="settings_reset_body">Your notes are not affected.</string>
+    <string name="settings_notes_stat">%1$d notes · %2$d tags · %3$d links</string>
+    <string name="settings_sync_choose">Choose cloud or local folder</string>
+    <string name="settings_sync_choose_hint">Two-way sync with Google Drive, OneDrive, or device storage</string>
+    <string name="settings_sync_folder">Cloud sync folder</string>
+    <string name="settings_sync_now">Sync now</string>
+    <string name="settings_sync_never">Not synced yet</string>
+    <string name="settings_sync_running">Syncing vault…</string>
+    <string name="settings_sync_done">Sync complete: %1$d pulled, %2$d pushed, %3$d conflicts</string>
+    <string name="settings_sync_failed">Could not access the sync folder</string>
+    <string name="settings_sync_disconnect">Disconnect folder</string>
+    <string name="settings_sync_disconnect_hint">Files on both sides are kept</string>
+    <string name="git_configure">Connect Git repository</string>
+    <string name="git_configure_hint">HTTPS repositories from GitHub, GitLab, Gitea, and compatible servers</string>
+    <string name="git_repository">Git repository</string>
+    <string name="git_remote_hint">Repository URL (https://…)</string>
+    <string name="git_branch_hint">Branch (for example main)</string>
+    <string name="git_username_hint">Git username</string>
+    <string name="git_author_hint">Commit author name</string>
+    <string name="git_email_hint">Commit author email</string>
+    <string name="git_token_hint">Access token or password (optional for public pull)</string>
+    <string name="git_token_not_saved">The token is used only for this operation and is not saved on the device.</string>
+    <string name="git_continue">Continue</string>
+    <string name="git_pull">Pull changes</string>
+    <string name="git_push">Commit &amp; push</string>
+    <string name="git_push_hint">Pulls remote changes first, then commits and pushes the vault</string>
+    <string name="git_edit">Git settings</string>
+    <string name="git_edit_hint">Remote, branch, username, and commit author</string>
+    <string name="git_disconnect">Disconnect Git</string>
+    <string name="git_disconnect_hint">Notes and the remote repository are kept</string>
+    <string name="git_pulling">Updating from Git…</string>
+    <string name="git_pushing">Committing and pushing…</string>
+    <string name="git_pull_done">Git updated: %1$d received, %2$d prepared, %3$d conflicts</string>
+    <string name="git_push_done">Git pushed: %1$d received, %2$d sent, %3$d conflicts</string>
+    <string name="git_invalid_config">Enter a valid HTTPS URL, branch, and author email</string>
+    <string name="git_auth_failed">Git authentication failed. Check the username and access token.</string>
+    <string name="git_network_failed">Could not reach the Git server</string>
+    <string name="git_branch_failed">The selected branch does not exist on this repository</string>
+    <string name="git_conflict_failed">Git found a merge conflict. The vault was left unchanged; a backup was created.</string>
+    <string name="git_failed">Git synchronization failed</string>
+    <string name="import_preview_title">Backup preview</string>
+    <string name="import_preview_summary">%1$d notes · %2$d canvases · %3$d attachments\nUnpacked size: %4$s</string>
+    <string name="share_new_note">Create a new note</string>
+    <string name="shared_note_title">Shared note</string>
+    <string name="share_added">Added to note</string>
+    <string name="widget_config_title">What should this widget open?</string>
+    <string name="widget_specific_note">Specific note</string>
+    <string name="widget_specific_task">Specific task</string>
+
+    <string name="storage_locked_title">Documents/Shard needs access</string>
+    <string name="storage_locked_body">Allow file access so notes are created in Documents/Shard and remain visible outside the app.</string>
+    <string name="storage_locked_action">Allow</string>
+    <string name="dismiss">Dismiss</string>
+
+    <string name="storage_at">Notes in %1$s</string>
+    <string name="vault_move_shared">Move vault to Documents/Shard</string>
+    <string name="vault_move_shared_hint">Lets other Markdown apps edit the same files</string>
+    <string name="vault_move_private">Move vault to the app folder</string>
+    <string name="vault_move_private_hint">Recommended: access can never be lost</string>
+    <string name="vault_move_q">Move the vault?</string>
+    <string name="vault_move_body">Every note is copied to %1$s and the app restarts. Back up first if you are unsure.</string>
+    <string name="vault_move_confirm">Move</string>
+    <string name="vault_moved">Vault moved</string>
+    <string name="vault_move_failed">Could not move the vault</string>
+    <string name="vault_moving_documents">Moving notes to Documents/Shard…</string>
+
+    <string name="welcome_note_title">Getting started</string>
+    <string name="welcome_note_body">Shard writes plain Markdown files. Nothing is locked in — every note is a `.md` file you can back up, sync or open in another editor.\n\n## Type / for anything\n\nOn an empty line, type `/` and the block palette opens at the cursor. Try `/table`, `/todo`, `/code` or `/callout`.\n\n- [ ] Create a to-do like this one\n- [x] Read this note\n\n## Markdown shortcuts\n\nStart a line with `# ` for a heading, `- ` for a bullet, `1. ` for a numbered list, `&gt; ` for a quote, or ``` for code. The marker disappears as the block changes.\n\n## Long-press to act\n\nLong-press the handle at the left of a block to convert, move, duplicate or delete it. Long-press a table’s frame — or the strips above a column and left of a row — for its own controls. Menus open beside what they act on, never over the whole screen.\n\n## Link your notes\n\nWrite [[double brackets]] to link a note, and #tags anywhere in the text. Backlinks appear at the bottom of every note, and the graph shows how everything connects.\n\n&gt; [!tip] Nothing to save\n&gt; Edits are written a moment after you stop typing. There is no save button.\n\n| What | Where |\n| :--- | :---- |\n| Import a vault | Menu → Import |\n| Back up everything | Menu → Back up vault |\n| Export one note | ⋮ → Export |</string>
+
+    <!-- Persistent canvas -->
+    <string name="canvas_default_title">Canvas</string>
+    <string name="canvas_loading">Opening canvas…</string>
+    <string name="canvas_options">Canvas options</string>
+    <string name="canvas_switch">Canvases</string>
+    <string name="canvas_new">New canvas</string>
+    <string name="canvas_add_text">Add text card</string>
+    <string name="canvas_add_note">Add note</string>
+    <string name="canvas_edit_text">Edit text card</string>
+    <string name="canvas_text_card">Text card</string>
+    <string name="canvas_connect">Connect to another card</string>
+    <string name="canvas_connect_hint">Tap another card to add or remove the connection</string>
+    <string name="canvas_clear">Clear canvas</string>
+    <string name="canvas_clear_q">Clear this canvas?</string>
+    <string name="canvas_clear_body">All cards and connections on it will be removed.</string>
+    <string name="canvas_delete">Delete canvas</string>
+    <string name="canvas_delete_q">Delete this canvas?</string>
+    <string name="canvas_delete_body">“%1$s” will be permanently deleted.</string>
+    <string name="canvas_zoom_in">Zoom in</string>
+    <string name="canvas_zoom_out">Zoom out</string>
+    <string name="canvas_fit">Fit canvas to screen</string>
+    <string name="canvas_no_notes">Create a note before adding it to the canvas</string>
+    <string name="canvas_load_failed">Could not open the canvas</string>
+    <string name="canvas_save_failed">Could not save the canvas</string>
+    <string name="canvas_create_failed">Could not create the canvas</string>
+    <string name="canvas_delete_failed">Could not delete the canvas</string>
+    <string name="canvas_name_conflict">A canvas with that name already exists</string>
+    <string name="canvas_add_image">Add image</string>
+    <string name="canvas_add_group">Add group</string>
+    <string name="canvas_edit_group">Edit group title</string>
+    <string name="canvas_color">Card colour</string>
+    <string name="canvas_color_default">Default</string>
+    <string name="canvas_color_red">Red</string>
+    <string name="canvas_color_orange">Orange</string>
+    <string name="canvas_color_yellow">Yellow</string>
+    <string name="canvas_color_green">Green</string>
+    <string name="canvas_color_blue">Blue</string>
+    <string name="canvas_color_purple">Purple</string>
+    <string name="canvas_resize">Resize</string>
+    <string name="canvas_size_small">Small</string>
+    <string name="canvas_size_medium">Medium</string>
+    <string name="canvas_size_large">Large</string>
+    <string name="canvas_edge_label">Connection label</string>
+    <string name="canvas_choose_connection">Choose connection</string>
+    <string name="canvas_no_connections">This card has no connections yet</string>
+    <string name="canvas_draw">Draw</string>
+    <string name="canvas_select_cards">Select multiple cards</string>
+    <string name="canvas_selected_cards">%1$d cards selected</string>
+    <string name="canvas_auto_align">Auto-align cards</string>
+    <string name="canvas_group_selection">Group selected cards</string>
+    <string name="canvas_link_note">Link to note</string>
+    <string name="canvas_unlink_note">Remove note link</string>
+    <string name="canvas_open_linked_note">Open linked note</string>
+    <string name="canvas_search">Search canvas</string>
+    <string name="canvas_search_hint">Text, card title or note…</string>
+    <string name="canvas_search_empty">No matching cards</string>
+    <string name="canvas_search_results">Matches: %1$d</string>
+    <string name="canvas_templates">Board template</string>
+    <string name="canvas_template_blank">Blank canvas</string>
+    <string name="canvas_template_kanban">Kanban board</string>
+    <string name="canvas_template_project">Project plan</string>
+    <string name="canvas_template_mind_map">Mind map</string>
+
+    <string name="graph_min_links">≥ %1$d links</string>
+
+    <!-- Daily notes and command palette -->
+    <string name="nav_daily_note">Today</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="calendar_title">Calendar</string>
+    <string name="calendar_today">Today</string>
+    <string name="calendar_previous_month">Previous month</string>
+    <string name="calendar_next_month">Next month</string>
+    <string name="calendar_open_daily_note">Open daily note</string>
+    <string name="calendar_legend">● notes created  ·  ✓ tasks  ·  ! open tasks\nBackground intensity shows notes edited that day.</string>
+    <string name="calendar_no_data">No day selected</string>
+    <string name="calendar_no_activity">No notes or tasks for this day.</string>
+    <string name="calendar_tasks_for_day">Tasks due</string>
+    <string name="calendar_no_tasks_for_day">No tasks are due on this day.</string>
+    <plurals name="calendar_notes_count"><item quantity="one">%d note created</item><item quantity="other">%d notes created</item></plurals>
+    <plurals name="calendar_tasks_count"><item quantity="one">%d task</item><item quantity="other">%d tasks</item></plurals>
+    <plurals name="calendar_open_tasks_count"><item quantity="one">%d open task</item><item quantity="other">%d open tasks</item></plurals>
+    <plurals name="calendar_activity_count"><item quantity="one">%d note edited</item><item quantity="other">%d notes edited</item></plurals>
+    <string name="command_palette">Command palette</string>
+    <string name="command_search_hint">Type an action…</string>
+    <string name="command_no_results">No matching actions</string>
+    <string name="command_new_note">Create note</string>
+    <string name="command_focus_search">Search notes</string>
+    <string name="command_open_settings">Open settings</string>
+    <string name="autocomplete_create_note">Create “%1$s”</string>
+    <string name="autocomplete_create_hint">Create the missing linked note</string>
+    <string name="autocomplete_new_tag">New tag</string>
+    <string name="autocomplete_note_created">Created “%1$s”</string>
+
+    <!-- Tasks -->
+    <string name="nav_tasks">Tasks</string>
+    <string name="tasks_title">Tasks</string>
+    <string name="tasks_overdue">Overdue</string>
+    <string name="tasks_today">Today</string>
+    <string name="tasks_upcoming">Upcoming</string>
+    <string name="tasks_no_date">No date</string>
+    <string name="tasks_completed">Completed</string>
+    <string name="tasks_archived">Archived</string>
+    <string name="tasks_empty">No tasks yet. Type /todo in a note to create one.</string>
+    <string name="selected_tasks_count">%1$d selected</string>
+    <string name="task_untitled">Untitled task</string>
+    <string name="task_set_due">Set due date</string>
+    <string name="task_set_time">Set execution time</string>
+    <string name="task_set_reminder">Set reminder time</string>
+    <string name="task_priority">Priority</string>
+    <string name="task_priority_none">No priority</string>
+    <string name="task_priority_low">Low</string>
+    <string name="task_priority_medium">Medium</string>
+    <string name="task_priority_high">High</string>
+    <string name="task_repeat">Repeat</string>
+    <string name="task_repeat_none">Does not repeat</string>
+    <string name="task_repeat_daily">Daily</string>
+    <string name="task_repeat_weekdays">Weekdays</string>
+    <string name="task_repeat_weekly">Weekly</string>
+    <string name="task_repeat_monthly">Monthly</string>
+    <string name="task_move_tomorrow">Move to tomorrow</string>
+    <string name="task_move_next_week">Move to next week</string>
+    <string name="task_actions">Task actions</string>
+    <string name="task_open_note">Open note</string>
+    <string name="task_calendar">Task calendar</string>
+    <string name="task_trash">Deleted tasks</string>
+    <string name="task_trash_empty">No deleted tasks</string>
+    <string name="task_bulk_properties">Change properties</string>
+    <string name="task_bulk_moved">Moved tasks: %1$d</string>
+    <string name="task_bulk_tagged">Tagged tasks: %1$d</string>
+    <string name="task_bulk_archived">Archived tasks: %1$d</string>
+    <string name="task_bulk_unarchived">Restored from archive: %1$d</string>
+    <string name="task_bulk_changed">Updated tasks: %1$d</string>
+    <string name="task_bulk_deleted">Deleted tasks: %1$d</string>
+    <string name="task_bulk_restored">Restored tasks: %1$d</string>
+    <string name="task_bulk_delete_title">Delete selected tasks?</string>
+    <string name="task_bulk_delete_body">%1$d selected tasks will be moved to Deleted tasks. You can restore them later.</string>
+    <string name="task_due_notification">Task due today</string>
+    <string name="task_channel_name">Task reminders</string>
+    <string name="task_channel_description">Reminders for dated Markdown tasks</string>
+    <string name="sync_conflict_channel_name">Sync conflicts</string>
+    <string name="sync_conflict_channel_description">Notifications when Shard preserves conflicting file versions</string>
+    <string name="sync_conflict_title">Sync conflicts preserved</string>
+    <plurals name="sync_conflict_body"><item quantity="one">%d conflicting copy was saved beside its note.</item><item quantity="other">%d conflicting copies were saved beside their notes.</item></plurals>
+
+    <!-- Properties and collections -->
+    <string name="properties_title">Properties</string>
+    <string name="properties_hint">Stored as plain YAML front matter and kept compatible with other Markdown apps.</string>
+    <string name="properties_add">Add property</string>
+    <string name="properties_edit">Edit property</string>
+    <string name="properties_key">Key, for example status</string>
+    <string name="properties_value">Value</string>
+    <string name="properties_invalid_key">Use letters, numbers, dashes or underscores in the key</string>
+    <string name="nav_collections">Collections</string>
+    <string name="collections_title">Collections</string>
+    <string name="collections_filter_hint">Filter: status:active</string>
+    <string name="collections_pick_hint">Pick a property value or type a filter.</string>
+    <string name="collections_empty">No custom properties yet. Add them from a note’s menu.</string>
+    <string name="collections_no_matches">No notes match this property filter.</string>
+    <string name="command_new_tex">New TeX file</string>
+    <string name="tex_editor_hint">LaTeX source…</string>
+    <string name="export_tex_source">TeX source (.tex)</string>
+    <string name="new_markdown_note">Markdown note (.md)</string>
+    <string name="new_markdown_note_hint">Block editor with formatting</string>
+    <string name="new_tex_note_hint">Raw LaTeX source editor</string>
+
+    <string name="lint_unexpected_brace">Unmatched closing brace</string>
+    <string name="lint_unclosed_brace">This brace is never closed</string>
+    <string name="lint_unclosed_environment">\begin{%1$s} is never closed</string>
+    <string name="lint_unexpected_end">\end{%1$s} has no matching \begin</string>
+    <string name="lint_mismatched_end">Expected \end{%1$s} here</string>
+    <string name="lint_unclosed_math">Math is never closed</string>
+    <string name="lint_problems">%1$d problems</string>
+    <string name="symbols_bar">Symbols</string>
+    <string name="insert_symbol">Insert %1$s</string>
+    <string name="preview_toggle">Preview</string>
+    <string name="preview_hide">Hide preview</string>
+    <string name="preview_title">Preview</string>
+    <string name="preview_math_hint">Math is shown as source</string>
+
+    <string name="split_divider">Resize panes</string>
+    <string name="tex_compiled">Compiled</string>
+    <string name="tex_compiling">Compiling…</string>
+    <string name="open_pdf_viewer">Open PDF</string>
+    <string name="page_indicator">%1$d of %2$d</string>
+
+    <!-- Markdown and TeX documentation -->
+    <string name="nav_help">Help</string>
+    <string name="nav_docs_md_tex">Markdown &amp; TeX</string>
+    <string name="docs_title">Markdown &amp; TeX guide</string>
+    <string name="docs_intro">Use this guide as a quick reference for files opened in Shard. Markdown (.md) uses a block editor; TeX (.tex) uses a raw LaTeX editor with a live preview and PDF export. Both formats remain plain text files in the vault.</string>
+    <string name="docs_md_title">Markdown (.md)</string>
+    <string name="docs_md_intro">A Markdown note is parsed into blocks when it opens and written back as ordinary Markdown when it saves. The focused block keeps its source markers visible; the reading view formats them and hides the markers.</string>
+    <string name="docs_source_label">Source</string>
+    <string name="docs_display_label">Displayed as</string>
+    <string name="docs_md_shortcuts_title">Markdown shortcuts</string>
+    <string name="docs_md_slash_title">Slash commands</string>
+    <string name="docs_md_mapping"><![CDATA[# Heading → level 1 heading\n## Heading → level 2 heading\n### Heading → level 3 heading\n**bold** → bold text\n*italic* → italic text\n~~deleted~~ → strikethrough\n==highlight== → highlighted text\n`code` → inline monospace code\n- item → bulleted list\n1. item → numbered list\n- [ ] task → unchecked task\n- [x] done → completed task\n> quote → quote block\n> [!warning] Attention → coloured callout\n[label](https://example.com) → clickable web link\n[[Note title]] → note link and backlinks\n#tag → coloured tag and tag filter\n![alt](image.png) → image block when it is on its own line\n| A | B | → pipe table when followed by a separator row\n```lang → fenced code block with optional language highlighting\n--- → horizontal divider]]></string>
+    <string name="docs_md_shortcuts"><![CDATA[Type a marker at the start of an empty line and press Space: #, ##, ###, -, *, +, 1., 1), [ ], [x], >. Typing ``` creates a code block; --- or *** creates a divider. Shard removes the trigger from the block and keeps the result as plain Markdown.]]></string>
+    <string name="docs_md_slash"><![CDATA[On an empty block, type / to open the command palette. Search by these names or their Ukrainian aliases:\n/text → paragraph\n/h1, /h2, /h3 → headings\n/bullet → bulleted list\n/numbered → numbered list\n/todo → task with checkbox\n/table → editable table\n/code → fenced code block\n/quote → quote\n/callout → note/tip/warning callout\n/divider → horizontal divider\n/image → image block\n/link → link to another note\n/tag → tag\n/date → today’s date]]></string>
+    <string name="docs_md_notes">Tables, tasks, callouts, wiki links, tags and images are stored as Markdown, so they can be backed up or opened in another Markdown application. A task can also carry readable inline scheduling metadata: @priority(high), 📅 2030-04-05, @time(09:00), @remind(08:45) and @repeat(weekly). HTML and unsupported Markdown constructs are kept as raw paragraph text rather than silently deleted.</string>
+    <string name="docs_tex_title">TeX / LaTeX (.tex)</string>
+    <string name="docs_tex_intro">A TeX file opens in the raw source editor. Type a backslash to see command completion. The right pane is a fast visual approximation of the supported LaTeX subset; Export PDF uses the same parsed content and does not run a full TeX distribution.</string>
+    <string name="docs_tex_structure_title">Document structure</string>
+    <string name="docs_symbols_title">Special symbols in math</string>
+    <string name="docs_tex_structure"><![CDATA[\\documentclass{article}\n\\usepackage{...}\n\\begin{document}\n  \\title{Title}\n  \\author{Author}\n  \\date{2026}\n  \\maketitle\n  ...content...\n\\end{document}]]></string>
+    <string name="docs_tex_mapping"><![CDATA[\\section{Title} → numbered section heading\n\\subsection{Title} → subsection heading\n\\textbf{bold} → bold text\n\\textit{italic}, \\emph{italic} → italic text\n\\underline{text} → underlined text\n\\texttt{code}, \\verb|code| → monospace text\n$R \\leq 1$ → inline math, for example R ≤ 1\n\\begin{equation} ... \\end{equation} → centered numbered formula\n\\frac{a}{b} → fraction inside a formula\n\\begin{itemize} + \\item → bulleted list\n\\begin{enumerate} + \\item → numbered list\n\\begin{tabular}{...} → drawn table\n\\begin{figure} + tikzpicture → vector diagram and caption\n\\tableofcontents → generated table of contents\n\\label{key}, \\ref{key} → cross-reference number\n\\pageref{key} → page reference marker\n\\cite{key} → numbered citation\n\\href{url}{label}, \\url{url} → underlined link\n\\clearpage, \\newpage → page break\n\\begin{landscape} ... → landscape page/table]]></string>
+    <string name="docs_tex_symbols"><![CDATA[\\alpha → α    \\beta → β    \\gamma → γ    \\Delta → Δ\n\\to → →       \\leq → ≤     \\geq → ≥     \\neq → ≠\n\\approx → ≈   \\equiv → ≡   \\infty → ∞   \\pm → ±\n\\times → ×    \\cdot → ·    \\int → ∫     \\sum → ∑\n\\prod → ∏     \\partial → ∂ \\nabla → ∇   \\in → ∈\n\\notin → ∉    \\subseteq → ⊆ \\forall → ∀  \\exists → ∃\n_{i} → ᵢ      _{action} → ₐ𝚌ₜᵢₒₙ      _{rec} → ᵣₑ𝚌]]></string>
+    <string name="docs_tex_rules"><![CDATA[The preview understands the environments and commands listed above plus common spacing, list, bibliography and preamble commands. Commands such as \\usepackage, \\geometry, \\label and \\newcommand are used only to interpret the document or are hidden from the visual output. Unknown commands with a braced argument show the argument as text. Red underlines indicate unclosed braces, environments or math delimiters; fix them before exporting.]]></string>
+    <string name="docs_footer">Tip: keep a small example note nearby while writing. The live preview is intentionally quick; the downloaded PDF is the canonical page-layout result.</string>
+    <string name="navigate_back">Previous note</string>
+    <string name="navigate_forward">Next note</string>
+    <string name="open_file_picker">Open file</string>
+    <string name="open_file_picker_hint">Choose Markdown or TeX with the system file picker</string>
+    <string name="drag_note_to_folder">Hold and drag to a folder</string>
+    <string name="note_moved_to_folder">Moved to %1$s</string>
+    <string name="filter_block_type">Block type</string>
+    <string name="filter_date">Modified date</string>
+    <string name="filter_all">All</string>
+    <string name="filter_headings">Headings</string>
+    <string name="filter_lists">Lists</string>
+    <string name="filter_tasks">Tasks</string>
+    <string name="filter_code">Code blocks</string>
+    <string name="filter_tables">Tables</string>
+    <string name="filter_images">Images</string>
+    <string name="filter_quotes">Quotes</string>
+    <plurals name="filter_last_days"><item quantity="one">Last %d day</item><item quantity="other">Last %d days</item></plurals>
+    <string name="automatic_backups">Automatic vault backups</string>
+    <string name="automatic_backup_none">A daily ZIP of the whole environment — notes, canvases, attachments, history and trash — will be created automatically</string>
+    <plurals name="automatic_backup_count"><item quantity="one">%d rotating ZIP backup</item><item quantity="other">%d rotating ZIP backups</item></plurals>
+    <string name="backup_create_now">Create backup now</string>
+    <string name="backup_share_latest">Share latest ZIP</string>
+    <string name="backup_clear_all">Delete automatic backups</string>
+    <string name="backup_clear_confirm">All locally stored automatic ZIP backups will be deleted.</string>
+    <string name="backup_creating">Creating full environment ZIP…</string>
+    <string name="crash_reports">Crash reports</string>
+    <plurals name="crash_report_count"><item quantity="one">%d local report</item><item quantity="other">%d local reports</item></plurals>
+    <string name="crash_share_latest">Share latest report</string>
+    <string name="crash_clear">Delete crash reports</string>
+    <string name="crash_clear_confirm">All local crash reports will be deleted.</string>
+
+    <!-- Cloud mirror -->
+    <string name="cloud_connect">Mirror to cloud</string>
+    <string name="cloud_connect_hint">Upload every save to Google Drive</string>
+    <string name="cloud_google_drive">Google Drive</string>
+    <string name="cloud_dropbox">Dropbox</string>
+    <string name="cloud_no_account">Not signed in</string>
+    <string name="cloud_no_accounts">No Google account on this device</string>
+    <string name="cloud_folder">Cloud folder</string>
+    <string name="cloud_connecting">Checking access\u2026</string>
+    <string name="cloud_connected">Cloud mirror on</string>
+    <string name="cloud_consent_declined">Access not granted</string>
+    <string name="cloud_sync_now">Upload now</string>
+    <string name="cloud_syncing">Uploading\u2026</string>
+    <string name="cloud_pending">%1$d waiting to upload</string>
+    <string name="cloud_rename_folder">Cloud folder name</string>
+    <string name="cloud_rename_folder_hint">Where the vault is mirrored</string>
+    <string name="cloud_rename_folder_dialog">Files already uploaded stay in the old folder.</string>
+    <string name="cloud_disconnect">Turn off cloud mirror</string>
+    <string name="cloud_disconnect_hint">Stops uploading; files in the cloud are kept</string>
+    <string name="cloud_disconnect_confirm">Shard will stop uploading changes. Notes already in the cloud are left untouched.</string>
+    <string name="cloud_failed">Upload failed</string>
+    <string name="cloud_auth_failed">Sign in again to keep uploading</string>
+    <string name="cloud_network_failed">No connection</string>
+    <string name="cloud_quota_failed">Cloud storage is full</string>
+    <string name="cloud_rate_limited">Cloud is throttling; will retry</string>
+    <string name="cloud_not_configured">Cloud mirror is not set up</string>
+</resources>

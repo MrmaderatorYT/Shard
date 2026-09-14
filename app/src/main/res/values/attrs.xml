@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Only attributes Material does not already declare. Re-declaring Material's own
+  colour attributes breaks views that resolve them internally, so anything named
+  colorOn*/colorOutline* must come from the library, not from here.
+-->
+<resources>
+    <attr name="colorSurfaceElevated" format="color" />
+    <attr name="colorSurfaceContainer" format="color" />
+    <attr name="colorSurfaceSunken" format="color" />
+</resources>

@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.test'
+    id 'androidx.baselineprofile'
+}
+
+android {
+    namespace 'com.ccs.shard.benchmark'
+    compileSdk 36
+
+    defaultConfig {
+        minSdk 23
+        targetSdk 36
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+
+    // This module tests the installed app instead of producing an APK of its own.
+    targetProjectPath ':app'
+}
+
+baselineProfile {
+    // A physical API 33+ device or rooted emulator can generate the profile.
+    useConnectedDevices = true
+}
+
+dependencies {
+    implementation 'androidx.benchmark:benchmark-macro-junit4:1.3.3'
+    implementation 'androidx.test.ext:junit:1.1.5'
+    implementation 'androidx.test.uiautomator:uiautomator:2.3.0'
+}

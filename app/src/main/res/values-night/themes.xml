@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark variant of the neutral palette. Accent overlays are shared. -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Shard" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/night</item>
+        <item name="colorSurface">@color/night</item>
+        <item name="colorSurfaceVariant">@color/night_container_high</item>
+        <item name="colorSurfaceElevated">@color/night_raised</item>
+        <item name="colorSurfaceContainer">@color/night_container</item>
+        <item name="colorSurfaceSunken">@color/night_sunken</item>
+        <item name="colorSurfaceContainerHigh">@color/night_container_high</item>
+
+        <item name="colorOnSurface">@color/night_ink</item>
+        <item name="colorOnSurfaceVariant">@color/night_ink_muted</item>
+        <item name="colorOnBackground">@color/night_ink</item>
+        <item name="colorOutline">@color/night_rule</item>
+        <item name="colorOutlineVariant">@color/night_rule_soft</item>
+
+        <item name="colorError">@color/danger_dark</item>
+        <item name="colorOnError">@color/night</item>
+
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
+
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="materialAlertDialogTheme">@style/Theme.Shard.Dialog</item>
+        <item name="bottomSheetDialogTheme">@style/Theme.Shard.BottomSheet</item>
+        <item name="android:textColorHighlight">@color/accent_violet_on_container</item>
+    </style>
+</resources>

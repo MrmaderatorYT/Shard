@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  TeX source editor.
+
+  Source and preview sit in a SplitPane so the divider can be dragged; the symbol
+  bar is pinned above the keyboard because backslash and braces are two taps deep
+  on every soft keyboard.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/texPath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="start"
+                android:textSize="13sp"
+                android:textColor="?attr/colorOnSurfaceVariant" />
+
+            <TextView
+                android:id="@+id/texProblems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textSize="11.5sp"
+                android:textColor="?attr/colorError"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/texSaveStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:singleLine="true"
+            android:textSize="11.5sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:alpha="0" />
+
+        <ImageButton
+            android:id="@+id/btnTexPreview"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_split"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/preview_toggle" />
+
+        <ImageButton
+            android:id="@+id/btnMore"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_menu_dots"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/note_actions" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/colorOutlineVariant" />
+
+    <com.ccs.shard.ui.SplitPane
+        android:id="@+id/texSplit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Left Pane: Editor with tab bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="?attr/colorSurfaceContainer">
+
+                <LinearLayout
+                    android:id="@+id/texTabContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_tex_tab"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp">
+
+                    <ImageView
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ic_block_code"
+                        app:tint="?attr/colorOnSurfaceVariant" />
+
+                    <TextView
+                        android:id="@+id/texTabTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="main.tex"
+                        android:textSize="12sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="?attr/colorOnSurface" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?attr/colorOutlineVariant" />
+
+            <com.ccs.shard.ui.TexEditText
+                android:id="@+id/texSource"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="top|start"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="28dp"
+                android:background="@null"
+                android:fontFamily="monospace"
+                android:hint="@string/tex_editor_hint"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:scrollbars="vertical"
+                android:textColor="?attr/colorOnSurface"
+                android:textColorHint="?attr/colorOnSurfaceVariant"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!-- Right Pane: OpenAI Prism-style PDF View -->
+        <FrameLayout
+            android:id="@+id/texPreviewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#1E1F22">
+
+            <!-- Top PDF Header / Control Bar -->
+            <LinearLayout
+                android:id="@+id/texPdfTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="#282A2E"
+                android:elevation="3dp"
+                android:translationZ="3dp">
+
+                <!-- Status pill: ✓ Скомпільовано -->
+                <LinearLayout
+                    android:id="@+id/texStatusPill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_pdf_status_pill"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp">
+
+                    <ImageView
+                        android:id="@+id/texStatusIcon"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_check"
+                        app:tint="#4CAF50" />
+
+                    <TextView
+                        android:id="@+id/texStatusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/tex_compiled"
+                        android:textSize="11.5sp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="#E0E0E0" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <!-- Page count badge: 1 із 1 -->
+                <TextView
+                    android:id="@+id/texPageCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:background="@drawable/bg_pdf_tool_pill"
+                    android:text="1 із 1"
+                    android:textSize="11sp"
+                    android:textColor="#B0B3B8" />
+
+                <!-- Zoom badge: 100% -->
+                <TextView
+                    android:id="@+id/texZoomBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:background="@drawable/bg_pdf_tool_pill"
+                    android:text="100%"
+                    android:textSize="11sp"
+                    android:textColor="#B0B3B8" />
+
+                <!-- Quick Export to PDF icon -->
+                <ImageButton
+                    android:id="@+id/btnQuickPdfExport"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_export"
+                    app:tint="#B0B3B8"
+                    android:contentDescription="@string/export_as_pdf" />
+            </LinearLayout>
+
+            <!-- ScrollView containing the authentic A4 Paper Sheet -->
+            <ScrollView
+                android:id="@+id/texPreviewScroll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="42dp"
+                android:clipToPadding="false"
+                android:paddingTop="14dp"
+                android:paddingBottom="68dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:scrollbars="vertical">
+
+                <!-- The White PDF Paper Page Container -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/texPaperSheet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="6dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardPreventCornerOverlap="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        android:paddingTop="28dp"
+                        android:paddingBottom="32dp">
+
+                        <TextView
+                            android:id="@+id/texPreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingMultiplier="1.38"
+                            android:textColor="#111111"
+                            android:fontFamily="serif"
+                            android:textSize="14.5sp" />
+
+                        <!-- Page number footer (like in LaTeX / PDF documents) -->
+                        <TextView
+                            android:id="@+id/texPageFooter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="28dp"
+                            android:gravity="center"
+                            android:text="— 1 —"
+                            android:textSize="11.5sp"
+                            android:fontFamily="serif"
+                            android:textColor="#888888" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </ScrollView>
+
+            <!-- Bottom Floating Action Pill: Перейти до PDF -->
+            <LinearLayout
+                android:id="@+id/texFloatingPdfAction"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="14dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_pdf_floating_pill"
+                android:elevation="6dp"
+                android:translationZ="6dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="14dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/ic_export"
+                    app:tint="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="7dp"
+                    android:text="@string/open_pdf_viewer"
+                    android:textSize="12.5sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </FrameLayout>
+    </com.ccs.shard.ui.SplitPane>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/colorOutlineVariant" />
+
+    <com.ccs.shard.ui.SymbolBar
+        android:id="@+id/texSymbols"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   API 31+ backup/transfer rules.
+
+   cloud-backup is quota-limited and leaves the device, so it carries only the
+   live vault and settings. device-transfer is local and unmetered, so it also
+   carries version history and trash - but still not crash reports.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Rotating ZIP snapshots: a full second copy of the vault. -->
+        <exclude domain="file" path="automatic-backups" />
+
+        <!-- Local crash dumps; may contain note paths and stack traces. -->
+        <exclude domain="file" path="crash-reports" />
+
+        <!-- JGit working clone + sync state; re-created on the next sync. -->
+        <exclude domain="file" path="git-sync" />
+
+        <!-- FTS search index: rebuilt from the vault on demand. -->
+        <exclude domain="database" path="note-search.db" />
+        <exclude domain="database" path="note-search.db-journal" />
+        <exclude domain="database" path="note-search.db-wal" />
+        <exclude domain="database" path="note-search.db-shm" />
+
+        <!-- Version history and trash can dwarf the notes themselves. -->
+        <exclude domain="external" path="vault/.shard/versions" />
+        <exclude domain="external" path="vault/.shard/trash" />
+        <exclude domain="external" path="vault/.shard/index.tsv" />
+        <exclude domain="external" path="vault/.shard/cloud-queue.tsv" />
+    </cloud-backup>
+
+    <device-transfer>
+        <exclude domain="file" path="automatic-backups" />
+        <exclude domain="file" path="crash-reports" />
+        <exclude domain="file" path="git-sync" />
+
+        <exclude domain="database" path="note-search.db" />
+        <exclude domain="database" path="note-search.db-journal" />
+        <exclude domain="database" path="note-search.db-wal" />
+        <exclude domain="database" path="note-search.db-shm" />
+
+        <exclude domain="external" path="vault/.shard/index.tsv" />
+        <exclude domain="external" path="vault/.shard/cloud-queue.tsv" />
+    </device-transfer>
+</data-extraction-rules>

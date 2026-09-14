@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The editor is intentionally chrome-light: a single 52dp bar, the note itself,
+  and a formatting strip that only appears while the keyboard is up. Everything
+  else lives behind long-press menus that open beside what they act on.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_back"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/back" />
+
+        <ImageButton
+            android:id="@+id/btnHistoryBack"
+            android:layout_width="36dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_arrow_left"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/navigate_back" />
+
+        <ImageButton
+            android:id="@+id/btnHistoryForward"
+            android:layout_width="36dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_arrow_right"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/navigate_forward" />
+
+        <TextView
+            android:id="@+id/breadcrumb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:textSize="13sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:singleLine="true"
+            android:ellipsize="start"
+            android:background="?attr/selectableItemBackground" />
+
+        <TextView
+            android:id="@+id/saveStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:textSize="11.5sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:alpha="0"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/btnPreview"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_split"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/preview_toggle" />
+
+        <ImageButton
+            android:id="@+id/btnReadMode"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_block_text"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/read_mode" />
+
+        <ImageButton
+            android:id="@+id/btnLockEditing"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_lock_open"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurfaceVariant"
+            android:contentDescription="@string/lock_editing" />
+
+        <ImageButton
+            android:id="@+id/btnMore"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_menu_dots"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="?attr/colorOnSurface"
+            android:contentDescription="@string/note_actions" />
+    </LinearLayout>
+
+    <com.ccs.shard.ui.SplitPane
+        android:id="@+id/editorSplit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/blockList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="none"
+            android:overScrollMode="ifContentScrolls" />
+
+        <LinearLayout
+            android:id="@+id/previewPane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="?attr/colorSurfaceContainer">
+
+            <LinearLayout
+                android:id="@+id/secondaryPaneBar"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="12dp"
+                android:paddingEnd="4dp"
+                android:background="?attr/colorSurfaceContainerHigh"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/secondaryPaneTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="13sp"
+                    android:textColor="?attr/colorOnSurface"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp" />
+
+                <ImageButton
+                    android:id="@+id/btnCloseSecond"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_close"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    app:tint="?attr/colorOnSurfaceVariant"
+                    android:contentDescription="@string/close_second_note" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/previewList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="40dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </com.ccs.shard.ui.SplitPane>
+
+    <EditText
+        android:id="@+id/rawMarkdown"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:gravity="top|start"
+        android:padding="16dp"
+        android:background="?attr/colorSurface"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurfaceVariant"
+        android:textSize="14sp"
+        android:typeface="monospace"
+        android:inputType="textMultiLine|textCapSentences"
+        android:scrollbars="vertical"
+        android:hint="@string/raw_markdown_hint" />
+
+    <View
+        android:id="@+id/formatBarDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/colorOutlineVariant"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/formatBarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

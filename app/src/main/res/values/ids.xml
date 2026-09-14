@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ids for views built in code (block rows, popups) so holders can find them. -->
+<resources>
+    <item name="block_handle" type="id" />
+    <item name="block_leading" type="id" />
+    <item name="block_input" type="id" />
+    <item name="block_image" type="id" />
+    <item name="block_caption" type="id" />
+    <item name="block_divider_line" type="id" />
+</resources>

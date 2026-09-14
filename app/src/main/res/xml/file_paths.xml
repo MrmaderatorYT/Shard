@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Exports are written to the cache directory and handed out as content URIs,
+     so sharing a PDF or ZIP never needs a storage permission. -->
+<paths>
+    <cache-path name="export" path="export/" />
+    <cache-path name="cache" path="." />
+    <external-path name="documents" path="Documents/Shard/" />
+    <external-files-path name="vault" path="vault/" />
+    <files-path name="automatic_backups" path="automatic-backups/" />
+    <files-path name="crash_reports" path="crash-reports/" />
+</paths>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Shard's mark: a faceted crystal shard.
+
+  Generated from the geometry in tools/logo.py so the adaptive layers, the
+  monochrome layer and the legacy bitmaps stay identical. Edit the generator, not
+  this file.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:pathData="M50.37,55.32L80.73,40.14L58.62,87.00z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="54.0" android:startY="21.0"
+                android:endX="54.0" android:endY="87.0">
+                <item android:offset="0" android:color="#3053B8" />
+                <item android:offset="1" android:color="#1C327C" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M32.55,43.77L50.37,55.32L58.62,87.00z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="54.0" android:startY="21.0"
+                android:endX="54.0" android:endY="87.0">
+                <item android:offset="0" android:color="#5587F4" />
+                <item android:offset="1" android:color="#325CCB" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M32.55,43.77L54.33,23.64L80.73,40.14L50.37,55.32z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="54.0" android:startY="21.0"
+                android:endX="54.0" android:endY="87.0">
+                <item android:offset="0" android:color="#C8DCFF" />
+                <item android:offset="1" android:color="#79A6FC" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

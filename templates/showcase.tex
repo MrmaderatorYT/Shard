@@ -1,0 +1,154 @@
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ukrainian, english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\title{\textbf{Shard: Демонстрація можливостей \LaTeX\ та PKM}}
+\author{CyberCraft Studio \and Команда Shard}
+\date{\today}
+
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{definition}{Означення}[section]
+\newtheorem{lemma}[theorem]{Лема}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Цей тестовий документ демонструє повнофункціональні можливості вбудованого рушія \textbf{Shard \TeX\ Editor}. Shard підтримує рендеринг складної математики, блоків теорем, структурованих таблиць, графіки TikZ, двосторонніх посилань та швидкий експорт у високоякісний векторний PDF без підключення до Інтернету.
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+
+\section{Вступ до Shard \TeX}
+\label{sec:intro}
+
+\textbf{Shard} — це автономний простір для керування персональними знаннями (PKM). Додаток поєднує зручність блокового редактора Markdown із точністю наукової типографіки \LaTeX.
+
+\subsection{Основні принципи системи}
+\begin{itemize}
+    \item \textbf{Local-First:} Усі документи зберігаються у відкритому форматі \texttt{.tex} та \texttt{.md} у сховищі \texttt{Documents/Shard}.
+    \item \textbf{On-Device Rendering:} Парсинг та візуалізація відбуваються нативно на пристрої без звернення до хмари.
+    \item \textbf{Інтеграція з графом:} Ви можете поєднувати математичні статті із загальною базою знань.
+\end{itemize}
+
+\section{Математичні можливості та аналіз}
+\label{sec:math}
+
+Shard підтримує повний набір середовищ пакета \texttt{amsmath} для відображення інлайн-формул на зразок $f(x) = \int_{0}^{x} e^{-t^2} \, dt$ та нумерованих рівнянь.
+
+\subsection{Фундаментальні рівняння}
+Розглянемо тотожність Ейлера, яка пов'язує п'ять фундаментальних математичних констант:
+\begin{equation}
+\label{eq:euler}
+e^{i\pi} + 1 = 0
+\end{equation}
+
+Інтеграл Гауса в багатовимірному просторі:
+\begin{equation}
+\label{eq:gauss}
+\int_{-\infty}^{+\infty} e^{-a x^2} \, dx = \sqrt{\frac{\pi}{a}}, \quad \text{де } a > 0
+\end{equation}
+
+\subsection{Багаторядкові викладки та системи (Align)}
+За допомогою середовища \texttt{align} можна створювати акуратно вирівняні математичні доведення:
+\begin{align}
+\nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \label{eq:maxwell1} \\
+\nabla \cdot \mathbf{B} &= 0 \label{eq:maxwell2} \\
+\nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \label{eq:maxwell3} \\
+\nabla \times \mathbf{B} &= \mu_0 \mathbf{J} + \mu_0 \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \label{eq:maxwell4}
+\end{align}
+
+\subsection{Матриці та лінійна алгебра}
+Підтримуються стандартні матричні середовища (\texttt{pmatrix}, \texttt{bmatrix}, \texttt{matrix}):
+\begin{equation}
+\mathbf{A} = 
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} & \dots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \dots & a_{mn}
+\end{pmatrix},
+\quad
+\det(\mathbf{A}) = \sum_{\sigma \in S_n} \operatorname{sgn}(\sigma) \prod_{i=1}^n a_{i, \sigma(i)}
+\end{equation}
+
+\section{Теореми, Означення та Доведення}
+\label{sec:theorems}
+
+\begin{definition}[Простір знань Shard]
+Кортеж $\mathcal{S} = (\mathcal{V}, \mathcal{E}, \mathcal{M})$, де $\mathcal{V}$ — множина локальних нотаток, $\mathcal{E}$ — орієнтовані гіперпосилання виду \texttt{[[wiki]]}, а $\mathcal{M}$ — математичні \TeX-модулі.
+\end{definition}
+
+\begin{theorem}[Про збіжність ряду Базеля]
+Нехай $S = \sum_{n=1}^{\infty} \frac{1}{n^2}$. Тоді сума ряду точно дорівнює:
+\begin{equation}
+\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Використовуючи розклад функції $\frac{\sin x}{x}$ у нескінченний добуток:
+\begin{equation}
+\frac{\sin x}{x} = \prod_{n=1}^{\infty} \left( 1 - \frac{x^2}{n^2 \pi^2} \right) = 1 - \frac{x^2}{\pi^2} \sum_{n=1}^{\infty} \frac{1}{n^2} + \mathcal{O}(x^4)
+\end{equation}
+Порівнюючи коефіцієнт при $x^2$ із рядом Тейлора $\frac{\sin x}{x} = 1 - \frac{x^2}{3!} + \dots$, маємо $\frac{1}{\pi^2} \sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{1}{6}$, звідки $\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}$.
+\end{proof}
+
+\section{Структуровані таблиці}
+\label{sec:tables}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|r|c|}
+\hline
+\textbf{Модуль Shard} & \textbf{Формат} & \textbf{Швидкодія} & \textbf{Офлайн} \\
+\hline
+Блоковий редактор & \texttt{.md} & $< 16\text{ ms}$ & \checkmark \\
+\TeX\ / \LaTeX\ Engine & \texttt{.tex} & Миттєво & \checkmark \\
+Граф зв'язків & Native Canvas & 60 FPS & \checkmark \\
+Нескінченний Canvas & Vector 2D & Плавний зум & \checkmark \\
+Експорт документів & PDF / HTML & Локально & \checkmark \\
+\hline
+\end{tabular}
+\caption{Порівняльна характеристика компонентів Shard}
+\label{tab:features}
+\end{table}
+
+\section{Векторні діаграми TikZ}
+\label{sec:tikz}
+
+Shard підтримує вбудоване середовище \texttt{tikzpicture} для побудови схем, геометричних фігур та графів:
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+    \draw[thick, fill=blue!10] (0,0) circle (1.8);
+    \draw[thick, fill=red!10] (2.2,0) circle (1.8);
+    \node at (0,0) {\textbf{Markdown}};
+    \node at (2.2,0) {\textbf{\LaTeX}};
+    \node at (1.1,0) {\textbf{Shard}};
+\end{tikzpicture}
+\caption{Синтез Markdown та \LaTeX\ у єдиному просторі}
+\label{fig:diagram}
+\end{figure}
+
+\section{Висновки та посилання}
+Як показано в Рівнянні~\eqref{eq:euler} та Таблиці~\ref{tab:features}, Shard забезпечує безкомпромісну якість відображення для наукових нотаток, технічних статей та конспектів.
+
+\begin{thebibliography}{9}
+\bibitem{shard2025}
+CyberCraft Studio, \textit{Shard: Автономна персональна база знань та \TeX-редактор}, 2025.
+\bibitem{knuth1984}
+Donald E. Knuth, \textit{The \TeX book}, Addison-Wesley, 1984.
+\end{thebibliography}
+
+\end{document}
